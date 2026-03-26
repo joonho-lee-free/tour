@@ -83,11 +83,11 @@ export default function InstagramEmbedGrid({ postUrls }: Props) {
             />
           ) : (
             <a
-              href="https://linktr.ee/leegafnb"
+              href="https://www.instagram.com/tour_4553/"
               target="_blank"
               rel="noreferrer"
               className="flex h-full w-full items-center justify-center text-sm font-semibold text-gray-600"
-              aria-label="linktr.ee로 이동"
+              aria-label="인스타그램으로 이동"
             >
               더보기
             </a>
