@@ -1,42 +1,55 @@
-// app/page.tsx
 import type { Metadata } from "next";
 import HomeClient from "./_sections/HomeClient";
 
 export const metadata: Metadata = {
-  // ✅ 메인 키워드(닭꼬치) 중심 타이틀
-  title: "닭꼬치 도매·납품 | HACCP 공장직영 순살닭꼬치 - 이가에프엔비",
-
-  // ✅ 검색 결과 설명 (B2B 의도 명확)
+  title: "코사무이 전문여행 | 온라인 최저가 맞춤 상담 - 허니예스",
   description:
-    "닭꼬치 전문 제조·납품 업체 이가에프엔비. HACCP 인증 공장직영으로 순살닭꼬치·꼬치류를 업소용 도매·박스단위로 전국 B2B 납품합니다.",
-
-  // ✅ canonical (중복 URL 방지)
+    "허니예스는 코사무이 전문여행 상담을 진행합니다. 가족여행, 커플여행, 허니문, 자유여행을 일정과 예산에 맞춰 온라인 최저가 견적으로 빠르게 안내해드립니다.",
   alternates: {
-    canonical: "https://leegafnb.kr/",
+    canonical: "https://tour6576.vercel.app/",
   },
-
-  // ✅ 공유(카톡/네이버/페북 등)용 메타
   openGraph: {
-    title: "닭꼬치 도매·납품 | HACCP 공장직영 이가에프엔비",
+    title: "코사무이 전문여행 | 온라인 최저가 맞춤 상담 - 허니예스",
     description:
-      "순살닭꼬치·꼬치류 업소용 도매 납품. HACCP 인증 공장직영, 전국 배송.",
-    url: "https://leegafnb.kr/",
-    siteName: "이가에프엔비",
+      "코사무이 가족여행, 허니문, 자유여행, 풀빌라·리조트 상담까지 온라인 최저가 맞춤 견적으로 안내합니다.",
+    url: "https://tour6576.vercel.app/",
+    siteName: "허니예스",
     type: "website",
     locale: "ko_KR",
+    images: [
+      {
+        url: "https://tour6576.vercel.app/images/hero-a.png",
+        width: 1200,
+        height: 630,
+        alt: "허니예스 코사무이 여행 대표 이미지",
+      },
+    ],
   },
-
-  // ✅ 키워드 보강 (검색엔진 신호)
+  twitter: {
+    card: "summary_large_image",
+    title: "코사무이 전문여행 | 온라인 최저가 맞춤 상담 - 허니예스",
+    description:
+      "코사무이 여행을 일정과 예산에 맞춰 온라인 최저가로 상담해드립니다.",
+    images: ["https://tour6576.vercel.app/images/hero-a.png"],
+  },
   keywords: [
-    "닭꼬치",
-    "순살닭꼬치",
-    "닭꼬치 도매",
-    "닭꼬치 납품",
-    "업소용 닭꼬치",
-    "닭꼬치 공장",
-    "닭꼬치 HACCP",
-    "이가에프엔비",
+    "코사무이",
+    "코사무이 여행",
+    "코사무이 전문여행",
+    "코사무이 여행사",
+    "코사무이 자유여행",
+    "코사무이 가족여행",
+    "코사무이 허니문",
+    "코사무이 풀빌라",
+    "코사무이 리조트",
+    "코사무이 최저가",
+    "허니예스",
+    "태국 여행",
   ],
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 type SearchParams = {
@@ -49,12 +62,10 @@ export default async function Page({
 }: {
   searchParams?: Promise<SearchParams> | SearchParams;
 }) {
-  // ✅ 기존 searchParams 처리 로직 그대로 유지
   const sp: SearchParams =
     searchParams && typeof (searchParams as any)?.then === "function"
       ? await (searchParams as Promise<SearchParams>)
       : ((searchParams as SearchParams) ?? {});
 
-  // ✅ 기존 HomeClient 연결 로직 그대로 유지
   return <HomeClient searchParams={sp} />;
 }

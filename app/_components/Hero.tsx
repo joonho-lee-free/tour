@@ -60,7 +60,7 @@ export default function Hero({
             <span className="text-gray-600">
               현지랜드가 직접 추천 일정표를 기준으로
               <span className="font-medium text-gray-800"> 코사무이 최저가로</span>
-               <p>빠르게 안내합니다.</p>
+               <span>빠르게 안내합니다.</span>
             </span>
           </p>
 
@@ -68,7 +68,7 @@ export default function Hero({
             <p>
               풀빌라 · 오션뷰 · 프라이빗 비치 중심으로
               <span className="font-semibold text-gray-900">
-                {" "}<p>호텔 선택부터 일정 구성까지  한 번에 비교해드립니다.</p>
+                {" "}<span>호텔 선택부터 일정 구성까지  한 번에 비교해드립니다.</span>
               </span>
              
             </p>
