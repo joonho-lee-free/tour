@@ -22,10 +22,10 @@ export default function InstagramSection() {
               <span>Instagram</span>
             </div>
             <h2 className="mt-3 text-lg font-bold md:text-xl">
-              최근 인스타 게시물
+              최근 인스타 여행후기
             </h2>
             <p className="mt-1 text-sm text-gray-600">
-              인스타 공개 게시물만 표시됩니다 (비공개/퍼가기 제한 게시물은 노출 불가)
+              일생의 단한번! (행복은 항상 기다리고 있어요~)
             </p>
           </div>
         </div>
