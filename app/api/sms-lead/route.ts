@@ -17,37 +17,39 @@ function shortErr(err: any) {
 
 function detectInquiryType(message: string) {
   const m = (message || "").toLowerCase();
-  if (/(애견|강아지|반려견|간식|펫)/.test(m)) return "애견간식 문의";
-  if (/(도매|납품|물량|대량|정기|거래처)/.test(m)) return "도매 납품 문의";
-  if (/(단가|가격|견적|원가|박스|몇\s*박스)/.test(m)) return "단가/견적 문의";
-  if (/(배송|택배|퀵|냉동|지역)/.test(m)) return "배송/지역 문의";
-  if (/(가맹|프랜차이즈|광고|마케팅|프렌차이즈)/.test(m))
-    return "가맹점/마케팅 문의";
-  if (/(개설|창업|비용|가맹비)/.test(m)) return "창업/개설 문의";
-  if (/(샘플|샘플문의|샘플가격|샘플테스트)/.test(m)) return "샘플 문의";
-  return "기타 문의";
+  if (/(허니문|신혼여행|커플|풀빌라|스냅)/.test(m)) return "허니문 문의";
+  if (/(가족여행|가족|아이|아동|부모님)/.test(m)) return "가족여행 문의";
+  if (/(호텔|리조트|콘래드|반얀트리|실라와디|통사이베이|킴튼|인터컨|피스|치사무이)/.test(m))
+    return "호텔 문의";
+  if (/(일정|일정표|투어|호핑|요트|마사지|사파리|짚라인|스냅사진)/.test(m))
+    return "일정/투어 문의";
+  if (/(단가|가격|견적|비용|예산|얼마|금액)/.test(m)) return "견적/비용 문의";
+  if (/(항공|출발|부산출발|인천출발|날짜|출국|귀국)/.test(m)) return "출발일/항공 문의";
+  if (/(픽업|샌딩|공항|이동|차량)/.test(m)) return "공항이동 문의";
+  if (/(예약|확정|가능|자리|객실)/.test(m)) return "예약가능 문의";
+   return "기타 문의";
 }
 
 function detectRegion(message: string) {
   const m = (message || "").toLowerCase();
   const regions: Array<[RegExp, string]> = [
-    [/제주/, "제주"],
-    [/서울/, "서울"],
-    [/경기|수원|성남|용인|화성|평택|고양|부천/, "경기"],
-    [/인천/, "인천"],
-    [/부산/, "부산"],
-    [/대구/, "대구"],
-    [/울산/, "울산"],
-    [/대전/, "대전"],
-    [/광주/, "광주"],
-    [/세종/, "세종"],
-    [/강원/, "강원"],
-    [/충북|청주/, "충북"],
-    [/충남|천안|아산/, "충남"],
-    [/전북|전주/, "전북"],
-    [/전남|여수|순천|목포/, "전남"],
-    [/경북|포항|구미|경주/, "경북"],
-    [/경남|창원|김해|양산|진주/, "경남"],
+   [/제주/, "제주출발"],
+   [/서울/, "서울출발"],
+   [/경기|수원|성남|용인|화성|평택|고양|부천/, "경기출발"],
+   [/인천/, "인천출발"],
+   [/부산/, "부산출발"],
+   [/대구/, "대구출발"],
+   [/울산/, "울산출발"],
+   [/대전/, "대전출발"],
+   [/광주/, "광주출발"],
+   [/세종/, "세종출발"],
+   [/강원/, "강원출발"],
+   [/충북|청주/, "충북출발"],
+   [/충남|천안|아산/, "충남출발"],
+   [/전북|전주/, "전북출발"],
+   [/전남|여수|순천|목포/, "전남출발"],
+   [/경북|포항|구미|경주/, "경북출발"],
+   [/경남|창원|김해|양산|진주/, "경남출발"],
   ];
   for (const [re, label] of regions) if (re.test(m)) return label;
   return "미정";
@@ -144,7 +146,7 @@ async function tryAcquireDedupLock(params: {
   const { db, phoneDigits, storeName, windowMs } = params;
 
   const key = makeDedupKey(phoneDigits, storeName);
-  const ref = db.collection("public_lead_dedup").doc(key);
+  const ref = db.collection("tour_lead_dedup").doc(key);
   const nowMs = Date.now();
 
   return await db.runTransaction(async (tx) => {
@@ -353,7 +355,7 @@ export async function POST(req: Request) {
 
       const createdAt = admin.firestore.FieldValue.serverTimestamp();
 
-      await db.collection("public_secure_leads").add({
+      await db.collection("tour_secure").add({
         storeName,
         phone,
         phoneLast4: phoneLast4(phone),
@@ -367,7 +369,7 @@ export async function POST(req: Request) {
         createdAt,
       });
 
-      await db.collection("public_leads").add({
+      await db.collection("tour_public").add({
         storeName: displayName,
         phone: displayPhone,
         phoneLast4: phoneLast4(phone),
@@ -383,7 +385,7 @@ export async function POST(req: Request) {
       });
 
       console.log(
-        "✅ FIRESTORE SAVED (dual-write): public_secure_leads + public_leads"
+        "✅ FIRESTORE SAVED (dual-write): tour_secure + tour_public"
       );
     } catch (firebaseErr: any) {
       console.error("❌ FIRESTORE FAILED:", firebaseErr?.message || firebaseErr);

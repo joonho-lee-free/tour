@@ -5,51 +5,51 @@ import { useEffect, useState } from "react";
 const PRODUCT_IMAGES = [
   {
     src: "/images/productsection/product-01.jpg",
-    alt: "왕순살왕파닭",
-    label: "왕순살꼬치 110g / 1,050원",
-    description: "1봉 15개 (10봉입) / 1박스 150개",
+    alt: "콘래드 사무이",
+    label: "콘래드 사무이",
+    description: "전 객실 풀빌라 중심의 럭셔리 리조트로, 오션뷰 허니문 대표 상품에 잘 맞습니다.",
   },
   {
     src: "/images/productsection/product-02.jpg",
-    alt: "왕파닭꼬치",
-    label: "왕파닭꼬치 110g / 1,150원",
-    description: "1봉 15개 (8 봉입)  / 1박스 120개",
+    alt: "반얀트리 사무이",
+    label: "반얀트리 사무이",
+    description: "프라이빗 베이와 인피니티 풀빌라 분위기가 강한, 고급 허니문 수요에 잘 맞는 리조트입니다.",
   },
   {
     src: "/images/productsection/product-03.jpg",
-    alt: "일본식순살꼬치",
-    label: "일본식순살 50g / 700원",
-    description: "1봉 15개 (10봉입) / 1박스 150개",
+    alt: "실라와디",
+    label: "실라와디",
+    description: "절벽형 오션뷰와 감성적인 풀빌라 무드가 강해 커플 여행과 사진 중심 여행에 잘 어울립니다.",
   },
   {
     src: "/images/productsection/product-04.jpg",
-    alt: "일본식파닭꼬치",
-    label: "일본식파닭 50g / 750원",
-    description: "1봉 15개 (8 봉입)  / 1박스 120개",
+    alt: "통사이베이",
+    label: "통사이베이",
+    description: "조용한 프라이빗 비치와 자연친화형 분위기가 강점이라 차분한 허니문에 적합합니다.",
   },
   {
     src: "/images/productsection/product-05.jpg",
-    alt: "무릎연골꼬치",
-    label: "무릎연골꼬치 40g / 800원",
-    description: "1봉 20개 (10봉입)  / 1박스 200개",
+    alt: "킴튼 키탈레이",
+    label: "킴튼 키탈레이",
+    description: "세련된 감성과 편한 동선이 장점이라 허니문과 가족여행 모두 반응이 좋은 리조트입니다.",
   },
   {
     src: "/images/productsection/product-06.jpg",
-    alt: "닭껍질꼬치",
-    label: "닭껍질꼬치 40g / 650원",
-    description: "1봉 20개 (10봉입)  / 1박스 200개",
+    alt: "인터컨티넨탈",
+    label: "인터컨티넨탈",
+    description: "객실 선택 폭이 넓고 리조트 밸런스가 좋아 가족여행과 휴양형 일정에 잘 맞습니다.",
   },
   {
     src: "/images/productsection/product-07.jpg",
-    alt: "염통꼬치",
-    label: "염통꼬치 40g / 800원",
-    description: "1봉 40개 (6 봉입)  / 1박스 240개",
+    alt: "피스 사무이",
+    label: "피스 사무이",
+    description: "합리적인 가격대에서 분위기와 리조트 만족도를 같이 잡기 좋은 호텔입니다.",
   },
   {
     src: "/images/productsection/product-08.jpg",
-    alt: "HACCP인증시설",
-    label: "HACCP 인증공장",
-    description: "안심하고 구매하세요",
+    alt: "치 사무이",
+    label: "치 사무이",
+    description: "실속형 예산으로 코사무이 감성을 담고 싶은 고객에게 잘 맞는 합리형 상품용 호텔입니다.",
   },
 ] as const;
 
@@ -98,12 +98,14 @@ export default function ProductSection() {
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold text-violet-800">
-            <span aria-hidden>🍢</span>
-            <span>제품 라인업</span>
+            <span aria-hidden>🏨</span>
+            <span>호텔 자료</span>
           </div>
-          <h2 className="mt-3 text-lg font-bold md:text-xl">제품 구성</h2>
+          <h2 className="mt-3 text-lg font-bold md:text-xl">
+            허니예스 추천 코사무이 호텔 라인업
+          </h2>
           <p className="mt-2 text-sm text-gray-700">
-            업소 운영에 가장 많이 사용되는 닭꼬치
+            허니문과 가족여행에 반응 좋은 코사무이 대표 리조트 중심으로 구성했습니다.
           </p>
         </div>
 
@@ -111,19 +113,19 @@ export default function ProductSection() {
           className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-violet-600 text-white shadow-sm transition-transform duration-200 ease-out group-hover:scale-105"
           aria-hidden
         >
-          🍢
+          🏨
         </div>
       </div>
 
       <ul className="mt-4 grid gap-2 text-sm text-gray-800 md:grid-cols-2">
-        <li>• 왕순살/파닭꼬치(닭다리살) 110g*25cm </li>
-        <li>• 일본식순살/파닭(닭다리살) 50g*18cm</li>
-        <li>• 무릎연골꼬치 40g*18cm </li>
-        <li>• 염통꼬치 / 닭껍질꼬치 40g*18cm</li>
+        <li>• 허니문 대표: 콘래드 / 반얀트리 / 실라와디 / 통사이베이</li>
+        <li>• 가족여행 추천: 킴튼 / 인터컨티넨탈 / 피스 / 치 사무이</li>
+        <li>• 풀빌라 / 오션뷰 / 프라이빗 비치 중심 비교</li>
+        <li>• 예산대별 맞춤 추천 가능</li>
       </ul>
 
       <p className="mt-3 text-sm text-gray-600">
-        ※ 전 제품 <b>박스 단위 · B2B 납품 전용 </b>
+        ※ 허니예스는 온라인 최저가 비교 기준으로 가장 유리한 조합을 안내합니다.
       </p>
 
       <div className="ss-product-grid mt-4">

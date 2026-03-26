@@ -79,7 +79,7 @@ export default function RecentLeads({ highlightStyles }: Props) {
   /** ✅ Firestore 최근 10개: public_leads만 조회 */
   useEffect(() => {
     const q = query(
-      collection(db, "public_leads"),
+      collection(db, "tour_public"),
       orderBy("createdAt", "desc"),
       limit(10)
     );

@@ -51,9 +51,11 @@ export default function HomeClient({
                 <span aria-hidden>💬</span>
                 <span>즉시 접수</span>
               </div>
-              <h2 className="mt-3 text-lg font-bold md:text-xl">문자 상담 요청</h2>
+              <h2 className="mt-3 text-lg font-bold md:text-xl">
+                코사무이 견적 상담 요청
+              </h2>
               <p className="mt-1 text-sm text-gray-300">
-                작성 즉시 담당자 휴대폰으로 문자 접수됩니다
+                작성 즉시 담당자에게 접수되며 빠르게 안내드립니다
               </p>
             </div>
 
@@ -61,13 +63,13 @@ export default function HomeClient({
               className="flex h-10 w-10 items-center justify-center rounded-2xl bg-green-500 text-white shadow-sm"
               aria-hidden
             >
-              📲
+              ✈️
             </div>
           </div>
 
           {sent && (
             <div className="mb-4 rounded-xl border border-green-400/30 bg-green-500/15 px-4 py-3 text-sm text-green-300">
-              접수 완료! 곧 연락드릴게요 🙂
+              접수 완료! 확인 후 빠르게 연락드릴게요 🙂
             </div>
           )}
 
@@ -83,7 +85,7 @@ export default function HomeClient({
                 name="storeName"
                 required
                 maxLength={40}
-                placeholder="상호(가게명)"
+                placeholder="성함 / 대표자명"
                 className="rounded-xl border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-green-500"
               />
 
@@ -100,7 +102,7 @@ export default function HomeClient({
               name="message"
               rows={4}
               maxLength={300}
-              placeholder="요청 내용 (예: 110g 10박스, 부산/냉동)"
+              placeholder="요청 내용 (예: 허니문 4박6일 / 2인 / 7월 출발 / 풀빌라 선호 / 예산 400만원대)"
               className="rounded-xl border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-green-500"
             />
 
@@ -113,10 +115,12 @@ export default function HomeClient({
               type="submit"
               className="mt-2 inline-flex items-center justify-center rounded-xl bg-green-500 px-4 py-3 text-sm font-semibold text-gray-900 shadow-md"
             >
-              문자로 접수하기
+              견적 상담 접수하기
             </button>
 
-            <p className="text-xs text-gray-400">* 과도한 반복 접수는 제한될 수 있습니다.</p>
+            <p className="text-xs text-gray-400">
+              * 실시간 항공/호텔 상황에 따라 요금은 변동될 수 있습니다.
+            </p>
           </form>
         </div>
       </section>

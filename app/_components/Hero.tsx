@@ -42,34 +42,49 @@ export default function Hero({
       <div className="grid items-center gap-8 md:grid-cols-2 md:gap-10">
         {/* Left */}
         <div>
-          <p className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium text-gray-700">
-            가게 운영 사장님 전용
+          <p className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-sm font-medium text-amber-800">
+            코사무이 허니문 · 가족여행 단독상품
           </p>
 
-          <h1 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight md:text-5xl">
-            업소용 순살닭꼬치 <span className="whitespace-nowrap">도매 납품</span>
+          <h1 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 md:text-5xl">
+            코사무이 최저가,
+            <br />
+            기회는 단한번!
           </h1>
 
           <p className="mt-4 text-base leading-relaxed text-gray-700 md:text-lg">
             <span className="font-semibold text-gray-900">
-              110g · 50g · 순살 · 냉동 · 박스단위 공급
+              신혼여행 · 가족여행 맞춤 코사무이 단독상품
             </span>
             <br />
             <span className="text-gray-600">
-              대량 발주 시 배송 혜택 제공 (도매 거래 기준, 조건별 안내)
+              현지랜드가 직접 추천 일정표를 기준으로
+              <span className="font-medium text-gray-800"> 코사무이 최저가로</span>
+               <p>빠르게 안내합니다.</p>
             </span>
           </p>
 
+          <div className="mt-5 space-y-2 text-sm leading-6 text-gray-700 md:text-base">
+            <p>
+              풀빌라 · 오션뷰 · 프라이빗 비치 중심으로
+              <span className="font-semibold text-gray-900">
+                {" "}<p>호텔 선택부터 일정 구성까지  한 번에 비교해드립니다.</p>
+              </span>
+             
+            </p>
+          </div>
+
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            {/* 📞 전화 (중간 페이지 /call → GA 이벤트 보장) */}
+            {/* 📞 전화 */}
             <a
               href="/call"
               onClick={() => trackEvent("call_click")}
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gray-900 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 active:opacity-80"
-              aria-label="전화로 도매 단가 바로 받기"
+              aria-label="전화로 코사무이 견적 상담"
+              title={tel ? `전화 상담 ${tel}` : "전화 상담"}
             >
               <span aria-hidden>📞</span>
-              전화로 단가 받기
+              전화 상담
             </a>
 
             {/* 💬 카톡 */}
@@ -79,7 +94,7 @@ export default function Hero({
               rel="noreferrer"
               onClick={() => trackEvent("kakao_click")}
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-gray-900 shadow-sm transition hover:bg-gray-50 active:bg-gray-100"
-              aria-label="카톡으로 도매 조건 문의"
+              aria-label="카톡으로 코사무이 견적 문의"
             >
               <span aria-hidden>💬</span>
               카톡 문의
@@ -90,15 +105,30 @@ export default function Hero({
               href={`#${leadAnchorId}`}
               onClick={() => trackEvent("sms_click")}
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-gray-900 shadow-sm transition hover:bg-gray-50 active:bg-gray-100"
-              aria-label="문자요청 폼으로 이동"
+              aria-label="코사무이 상담 폼으로 이동"
             >
               <span aria-hidden>✉️</span>
-              문자요청
+              일정표 상담
             </a>
           </div>
 
+          <div className="mt-5 grid gap-2 text-sm text-gray-600 md:grid-cols-2">
+            <div className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-3">
+              <p className="font-semibold text-gray-900">허니문 추천</p>
+              <p className="mt-1">풀빌라 · 오션뷰 · 로맨틱 일정 중심</p>
+            </div>
+            <div className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-3">
+              <p className="font-semibold text-gray-900">가족여행 추천</p>
+              <p className="mt-1">객실 타입 · 동선 · 리조트 편의성 중심</p>
+            </div>
+          </div>
+
           <p className="mt-4 text-sm text-gray-600">
-            ※ 본 페이지는 <span className="font-semibold">업소 납품/도매</span> 전용입니다.
+            ※ 실시간 항공/호텔 상황에 따라 요금은 변동될 수 있으며,
+            <span className="font-semibold text-gray-900">
+              {" "}상담 시 가장 유리한 조건으로 안내
+            </span>
+            해드립니다.
           </p>
         </div>
 
@@ -107,7 +137,7 @@ export default function Hero({
           <div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-sm">
             <img
               src={heroImageSrc}
-              alt="업소용 순살닭꼬치 도매 납품 제품 이미지"
+              alt="코사무이 허니문 및 가족여행 대표 리조트 이미지"
               className="h-auto w-full object-cover"
             />
           </div>

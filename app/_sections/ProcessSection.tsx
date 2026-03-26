@@ -9,7 +9,9 @@ export default function ProcessSection() {
             <span aria-hidden>🧾</span>
             <span>진행 절차</span>
           </div>
-          <h2 className="mt-3 text-lg font-bold md:text-xl">주문 진행 순서</h2>
+          <h2 className="mt-3 text-lg font-bold md:text-xl">
+            허니예스 예약 진행 순서
+          </h2>
         </div>
 
         <div
@@ -20,16 +22,17 @@ export default function ProcessSection() {
         </div>
       </div>
 
-      {/* ✅ 이미지 제거, 텍스트 안내만 */}
       <ol className="mt-4 grid gap-2 text-sm text-gray-800 md:grid-cols-2">
-        <li>1️⃣ 문의 접수 / 담당자상담</li>
-        <li>2️⃣ 발주GO 계정 발급</li>
-        <li>3️⃣ 충전 후 주문</li>
-        <li>4️⃣ 출고 · 배송</li>
+        <li>1️⃣ 상담 접수 후 출발일 · 인원 · 예산대를 확인합니다</li>
+        <li>2️⃣ 허니문 또는 가족여행 스타일에 맞는 호텔을 추천합니다</li>
+        <li>3️⃣ 원하는 일정표와 선택 일정을 함께 조율합니다</li>
+        <li>4️⃣ 항공 및 객실 가능 여부 확인 후 최종 견적을 안내합니다</li>
+        <li>5️⃣ 예약 확정 후 출발 전 준비사항을 자세히 안내합니다</li>
+        <li>6️⃣ 여행 전까지 변경 가능 범위와 체크사항을 계속 도와드립니다</li>
       </ol>
 
       <p className="mt-3 text-sm text-gray-600">
-        ※ 첫 거래 시 담당자가 직접 안내드립니다.
+        ※ 허니예스는 호텔, 일정, 예산을 함께 보고 가장 잘 맞는 코사무이 단독상품으로 안내합니다.
       </p>
 
       <div
