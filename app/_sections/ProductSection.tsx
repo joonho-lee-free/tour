@@ -136,7 +136,7 @@ export default function ProductSection() {
               </div>
 
               <h2 className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
-                허니예스 추천 코사무이 호텔 라인업
+                추천 코사무이 호텔 라인업
               </h2>
 
               <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">

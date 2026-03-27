@@ -65,10 +65,10 @@ export default function WhySection() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800">
                 <span aria-hidden>🌴</span>
-                <span>왜 허니예스인가</span>
+                <span>왜 다이렉트인가</span>
               </div>
-              <h2 className="mt-3 text-lg font-bold md:text-xl">
-                허니예스가 코사무이 단독상품을 제안하는 이유
+              <h2 className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
+                다이렉트상품 제안이유
               </h2>
             </div>
 
@@ -81,26 +81,19 @@ export default function WhySection() {
           </div>
 
           <ul className="mt-4 grid gap-3 text-sm text-gray-800">
-            <li>✔ 코사무이는 호텔 선택이 여행 만족도를 크게 좌우합니다</li>
-            <li>✔ 허니문은 풀빌라 · 오션뷰 · 선셋 분위기가 중요합니다</li>
-            <li>✔ 가족여행은 공항 이동, 리조트 시설, 객실 구성이 중요합니다</li>
-            <li>✔ 허니예스는 호텔 자료와 일정표 중심으로 상품을 설계합니다</li>
+            <li>✔ 중간마진(여행사)없이 다이렉트로 최저가가 가능!</li>
+            <li>✔ 한국사무소에서 여행사와 동일한 안내서비스</li>
+            <li>✔ 가족여행은 설계 및 내용이 핵심 구성에 맞게 맞춤</li>
+            <li>✔ 현지랜드의 투명한 견적, 다이렉트 견적을 지향</li>
           </ul>
 
-          <p className="mt-4 text-sm leading-relaxed text-gray-700">
-            허니예스는 단순 항공권 예약이 아니라
-            <span className="font-semibold text-gray-900">
-              {" "}호텔 선택과 일정 구성까지 함께 보는 코사무이 단독상품
-            </span>
-            을 안내합니다.
-          </p>
-
+         
           <p className="mt-2 text-sm leading-relaxed text-gray-700">
-            풀빌라, 오션뷰, 프라이빗 비치, 가족여행 동선까지 함께 보고,
+            신혼여행, 가족여행 상품 · 동선까지 다이렉트,
             <span className="font-semibold text-gray-900">
-              {" "}온라인 최저가 비교 기준으로 가장 유리한 방향
+              {" "}온라인 최저가 비교 기준으로 가장 유리하게 
             </span>
-            으로 제안합니다.
+            제안합니다.
           </p>
         </div>
 

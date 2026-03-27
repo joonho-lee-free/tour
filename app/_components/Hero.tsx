@@ -43,7 +43,7 @@ export default function Hero({
         {/* Left */}
         <div>
           <p className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-sm font-medium text-amber-800">
-            코사무이 허니문 · 가족여행 단독상품
+            허니문 · 가족여행 · 다이렉트
           </p>
 
           <h1 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 md:text-5xl">
@@ -54,21 +54,21 @@ export default function Hero({
 
           <p className="mt-4 text-base leading-relaxed text-gray-700 md:text-lg">
             <span className="font-semibold text-gray-900">
-              신혼여행 · 가족여행 맞춤 코사무이 단독상품
+              코사무이 현지랜드 다이렉트 상품
             </span>
             <br />
             <span className="text-gray-600">
-              현지랜드가 직접 추천 일정표를 기준으로
-              <span className="font-medium text-gray-800"> 코사무이 최저가로</span>
-               <span>빠르게 안내합니다.</span>
+              코사무이 여행 견적서를 받은분이라면
+              <span className="font-medium text-gray-800"> 중간마진(여행사마진 )없이 </span>
+              <span>재견적받고! 비교해보세요!</span>
             </span>
           </p>
 
           <div className="mt-5 space-y-2 text-sm leading-6 text-gray-700 md:text-base">
             <p>
-              풀빌라 · 오션뷰 · 프라이빗 비치 중심으로
+              항공 · 풀빌라 · 리조트 · 여행일정 현지랜드 장점! 
               <span className="font-semibold text-gray-900">
-                {" "}<span>호텔 선택부터 일정 구성까지  한 번에 비교해드립니다.</span>
+                {" "}<span>빠를면 빠를수록 더 최저가!</span>
               </span>
              
             </p>
@@ -112,23 +112,13 @@ export default function Hero({
             </a>
           </div>
 
-          <div className="mt-5 grid gap-2 text-sm text-gray-600 md:grid-cols-2">
-            <div className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-3">
-              <p className="font-semibold text-gray-900">허니문 추천</p>
-              <p className="mt-1">풀빌라 · 오션뷰 · 로맨틱 일정 중심</p>
-            </div>
-            <div className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-3">
-              <p className="font-semibold text-gray-900">가족여행 추천</p>
-              <p className="mt-1">객실 타입 · 동선 · 리조트 편의성 중심</p>
-            </div>
-          </div>
-
+         
           <p className="mt-4 text-sm text-gray-600">
             ※ 실시간 항공/호텔 상황에 따라 요금은 변동될 수 있으며,
             <span className="font-semibold text-gray-900">
-              {" "}상담 시 가장 유리한 조건으로 안내
+              {" "}상담 시 가장 유리한 조건으로 견적내
             </span>
-            해드립니다.
+             드립니다.
           </p>
         </div>
 

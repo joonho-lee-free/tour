@@ -57,11 +57,11 @@ export default function InstagramEmbedGrid({ postUrls }: Props) {
     };
   }, [postUrls]);
 
-  const urls = [...postUrls].slice(0, 8);
+  const urls = [...postUrls].slice(0, 9);
   while (urls.length < 9) urls.push("");
 
   return (
-    <div className="grid grid-cols-2 gap-2 sm:gap-3">
+    <div className="grid grid-cols-3 gap-2 sm:gap-3">
       {urls.map((url, i) => (
         <div
           key={`${url}-${i}`}

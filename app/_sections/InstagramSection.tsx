@@ -22,10 +22,10 @@ export default function InstagramSection() {
               <span>Instagram</span>
             </div>
             <h2 className="mt-3 text-lg font-bold md:text-xl">
-              최근 인스타 여행후기
+              인스타 당첨자 여행후기
             </h2>
             <p className="mt-1 text-sm text-gray-600">
-              일생의 단한번! (행복은 항상 기다리고 있어요~)
+              사진을 보내주시는 고객께 추첨하여 선물을 드립니다.
             </p>
           </div>
         </div>
