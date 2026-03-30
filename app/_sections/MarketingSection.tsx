@@ -27,6 +27,9 @@ export default function MarketingSection() {
           "/images/marketingsection/01/01.jpg",
           "/images/marketingsection/01/02.jpg",
           "/images/marketingsection/01/03.jpg",
+          "/images/marketingsection/01/04.jpg",
+          "/images/marketingsection/01/05.jpg",
+          "/images/marketingsection/01/06.jpg",
         ],
       },
       {
@@ -40,6 +43,9 @@ export default function MarketingSection() {
           "/images/marketingsection/02/01.jpg",
           "/images/marketingsection/02/02.jpg",
           "/images/marketingsection/02/03.jpg",
+          "/images/marketingsection/02/04.jpg",
+          "/images/marketingsection/02/05.jpg",
+          "/images/marketingsection/02/06.jpg",
         ],
       },
       {
@@ -53,6 +59,9 @@ export default function MarketingSection() {
           "/images/marketingsection/03/01.jpg",
           "/images/marketingsection/03/02.jpg",
           "/images/marketingsection/03/03.jpg",
+          "/images/marketingsection/03/04.jpg",
+          "/images/marketingsection/03/05.jpg",
+          "/images/marketingsection/03/06.jpg",
         ],
       },
       {
@@ -66,6 +75,9 @@ export default function MarketingSection() {
           "/images/marketingsection/04/01.jpg",
           "/images/marketingsection/04/02.jpg",
           "/images/marketingsection/04/03.jpg",
+          "/images/marketingsection/04/04.jpg",
+          "/images/marketingsection/04/05.jpg",
+          "/images/marketingsection/04/06.jpg",
         ],
       },
       {
@@ -79,6 +91,9 @@ export default function MarketingSection() {
           "/images/marketingsection/05/01.jpg",
           "/images/marketingsection/05/02.jpg",
           "/images/marketingsection/05/03.jpg",
+          "/images/marketingsection/05/04.jpg",
+          "/images/marketingsection/05/05.jpg",
+          "/images/marketingsection/05/06.jpg",
         ],
       },
       {
@@ -92,11 +107,15 @@ export default function MarketingSection() {
           "/images/marketingsection/06/01.jpg",
           "/images/marketingsection/06/02.jpg",
           "/images/marketingsection/06/03.jpg",
+          "/images/marketingsection/06/04.jpg",
+          "/images/marketingsection/06/05.jpg",
+          "/images/marketingsection/06/06.jpg",
+          
         ],
       },
       {
         id: "shopping",
-        name: "쇼핑 일정",
+        name: "빅부다 미라사원",
         cover: "/images/marketingsection/marketing-07.jpg",
         summary:
           "라텍스, 진주, 침향 등 현지 인기 품목을 둘러볼 수 있는 일정으로 필요에 따라 선택형으로 조정 가능합니다.",
@@ -105,6 +124,9 @@ export default function MarketingSection() {
           "/images/marketingsection/07/01.jpg",
           "/images/marketingsection/07/02.jpg",
           "/images/marketingsection/07/03.jpg",
+          "/images/marketingsection/07/04.jpg",
+          "/images/marketingsection/07/05.jpg",
+          "/images/marketingsection/07/06.jpg",
         ],
       },
       {
@@ -118,6 +140,9 @@ export default function MarketingSection() {
           "/images/marketingsection/08/01.jpg",
           "/images/marketingsection/08/02.jpg",
           "/images/marketingsection/08/03.jpg",
+          "/images/marketingsection/08/04.jpg",
+          "/images/marketingsection/08/05.jpg",
+          "/images/marketingsection/08/06.jpg",
         ],
       },
     ],

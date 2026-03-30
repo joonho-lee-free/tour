@@ -27,6 +27,8 @@ export default function ProductSection() {
           "/images/hotels/conrad/02.jpg",
           "/images/hotels/conrad/03.jpg",
           "/images/hotels/conrad/04.jpg",
+          "/images/hotels/conrad/05.jpg",
+          "/images/hotels/conrad/06.jpg",
         ],
       },
       {
@@ -40,6 +42,8 @@ export default function ProductSection() {
           "/images/hotels/banyantree/02.jpg",
           "/images/hotels/banyantree/03.jpg",
           "/images/hotels/banyantree/04.jpg",
+          "/images/hotels/banyantree/05.jpg",
+          "/images/hotels/banyantree/06.jpg",
         ],
       },
       {
@@ -53,6 +57,8 @@ export default function ProductSection() {
           "/images/hotels/silavadee/02.jpg",
           "/images/hotels/silavadee/03.jpg",
           "/images/hotels/silavadee/04.jpg",
+          "/images/hotels/silavadee/05.jpg",
+          "/images/hotels/silavadee/06.jpg",
         ],
       },
       {
@@ -66,6 +72,9 @@ export default function ProductSection() {
           "/images/hotels/thesiambay/02.jpg",
           "/images/hotels/thesiambay/03.jpg",
           "/images/hotels/thesiambay/04.jpg",
+          "/images/hotels/thesiambay/05.jpg",
+          "/images/hotels/thesiambay/06.jpg",
+        
         ],
       },
       {
@@ -78,6 +87,10 @@ export default function ProductSection() {
           "/images/hotels/kimpton/01.jpg",
           "/images/hotels/kimpton/02.jpg",
           "/images/hotels/kimpton/03.jpg",
+          "/images/hotels/kimpton/04.jpg",
+          "/images/hotels/kimpton/05.jpg",
+          "/images/hotels/kimpton/06.jpg",
+        
         ],
       },
       {
@@ -90,23 +103,30 @@ export default function ProductSection() {
           "/images/hotels/intercontinental/01.jpg",
           "/images/hotels/intercontinental/02.jpg",
           "/images/hotels/intercontinental/03.jpg",
+          "/images/hotels/intercontinental/04.jpg",
+          "/images/hotels/intercontinental/05.jpg",
+          "/images/hotels/intercontinental/06.jpg",
         ],
       },
       {
         id: "peace",
-        name: "피스 사무이",
+        name: "더 사란",
         cover: "/images/productsection/product-07.jpg",
-        summary: "합리적인 가격대에서 분위기와 리조트 만족도를 같이 잡기 좋은 호텔입니다.",
+        summary: "합리적인 가격대에서 분위기와 풀비라 만족도를 같이 잡기 좋은 호텔입니다.",
         desc: "가성비와 리조트 무드를 같이 챙기고 싶은 고객에게 추천",
         images: [
           "/images/hotels/peace/01.jpg",
           "/images/hotels/peace/02.jpg",
           "/images/hotels/peace/03.jpg",
+          "/images/hotels/peace/04.jpg",
+          "/images/hotels/peace/05.jpg",
+          "/images/hotels/peace/06.jpg",
+          
         ],
       },
       {
         id: "chi",
-        name: "치 사무이",
+        name: "포시즌",
         cover: "/images/productsection/product-08.jpg",
         summary: "실속형 예산으로 코사무이 감성을 담고 싶은 고객에게 잘 맞는 합리형 상품용 호텔입니다.",
         desc: "합리형 예산대 일정에 맞는 실속 숙소 라인",
@@ -114,6 +134,9 @@ export default function ProductSection() {
           "/images/hotels/chi/01.jpg",
           "/images/hotels/chi/02.jpg",
           "/images/hotels/chi/03.jpg",
+          "/images/hotels/chi/04.jpg",
+          "/images/hotels/chi/05.jpg",
+          "/images/hotels/chi/06.jpg",
         ],
       },
     ],
