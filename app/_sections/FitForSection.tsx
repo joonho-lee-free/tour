@@ -5,22 +5,22 @@ import { useEffect, useState } from "react";
 const FIT_IMAGES = [
   {
     src: "/images/fitforsection/fit-01.jpg",
-    alt: "코사무이 허니문 리조트",
-    label: "허니문 비교견적",
+    alt: "에어텔 고객 무료 픽업샌딩",
+    label: "에어텔 무료 픽업",
   },
   {
     src: "/images/fitforsection/fit-02.jpg",
-    alt: "코사무이 가족여행 리조트",
-    label: "가족여행 다이렉트",
+    alt: "호텔과 행사 예약 고객 차량지원",
+    label: "호텔+행사 차량지원",
   },
   {
     src: "/images/fitforsection/fit-03.jpg",
-    alt: "코사무이 풀빌라",
-    label: "풀빌라 할인가",
+    alt: "항공 호텔 행사 예약 고객 최저가 견적",
+    label: "항공+호텔+행사 최저가",
   },
   {
     src: "/images/fitforsection/fit-04.jpg",
-    alt: "코사무이 오션뷰",
+    alt: "코사무이 현지랜드 다이렉트 혜택",
     label: "현지랜드 다이렉트",
   },
 ] as const;
@@ -70,11 +70,13 @@ export default function FitForSection() {
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-800">
-            <span aria-hidden>🎯</span>
-            <span>추천 대상</span>
+            <span aria-hidden>🚐</span>
+            <span>현지랜드 다이렉트 혜택</span>
           </div>
           <h2 className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
-            이런 분께 추천합니다
+            어디까지 맡기셨냐에 따라,
+            <br className="hidden md:block" />
+            혜택도 더 크게 챙겨드립니다
           </h2>
         </div>
 
@@ -82,19 +84,25 @@ export default function FitForSection() {
           className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-sm transition-transform duration-200 ease-out group-hover:scale-105"
           aria-hidden
         >
-          🎯
+          🚐
         </div>
       </div>
 
+      <p className="mt-4 text-sm leading-6 text-gray-700 md:text-base">
+        코사무이는 예쁘기만 한 여행지가 아닙니다.
+        <br className="hidden md:block" />
+        이동과 예약 조합이 생각보다 중요해서, <b>현지랜드가 붙으면 조건이 달라집니다.</b>
+      </p>
+
       <ul className="mt-4 grid gap-2 text-sm text-gray-800 md:grid-cols-2">
-        <li>✔ 박람회 다녀온 후 견적비교가 필요한 분</li>
-        <li>✔ 가족여행을 합리적인 가격이 필요하신 분</li>
-        <li>✔ 풀빌라 · 리조트 · 할인가에 맞추고 싶으신 분</li>
-        <li>✔ 온라인 최저가 비교 기준으로 상품을 찾는 분</li>
+        <li>✔ 에어텔(항공+호텔 직접 예약) 고객 → 공항-리조트 무료 픽업·샌딩</li>
+        <li>✔ 호텔+행사 예약 고객 → 1인 50,000원에 차량지원까지</li>
+        <li>✔ 항공+호텔+행사 예약 고객 → 최저가 견적 우선 제안</li>
+        <li>✔ 현지랜드 다이렉트 상담 → 이동·조건·동선까지 한 번에 정리</li>
       </ul>
 
       <p className="mt-3 text-sm text-gray-600">
-        ※ 단순 항공권 예약이 아니라 <b>호텔 + 일정표 중심 다이렉트로</b> 비교합니다.
+        ※ 따로 예약하셨어도 괜찮습니다. <b>어떻게 조합하셨는지에 따라 가장 유리한 조건으로 다시 맞춰드립니다.</b>
       </p>
 
       <div className="ss-fit-grid mt-4">
@@ -118,6 +126,21 @@ export default function FitForSection() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-5 rounded-2xl border border-blue-200 bg-white/80 p-4 text-sm text-gray-700">
+        <p className="font-bold text-slate-900">
+          에어텔이면 이동 혜택,
+          <span className="mx-1 hidden md:inline">·</span>
+          호텔+행사면 차량 혜택,
+          <span className="mx-1 hidden md:inline">·</span>
+          항공+호텔+행사면 견적 혜택
+        </p>
+        <p className="mt-2 text-gray-600">
+          코사무이는 누가 붙어주느냐에 따라 여행이 훨씬 편해집니다.
+          <br className="hidden md:block" />
+          <b>현지랜드로 잡으면, 가격도 이동도 일정도 더 실속 있게 챙길 수 있습니다.</b>
+        </p>
       </div>
 
       <div className="mt-5 h-1 w-full rounded-full bg-blue-200" aria-hidden />

@@ -81,19 +81,19 @@ export default function WhySection() {
           </div>
 
           <ul className="mt-4 grid gap-3 text-sm text-gray-800">
-            <li>✔ 중간마진(여행사)없이 다이렉트로 최저가가 가능!</li>
-            <li>✔ 한국사무소에서 여행사와 동일한 안내서비스</li>
-            <li>✔ 가족여행은 설계 및 내용이 핵심 구성에 맞게 맞춤</li>
-            <li>✔ 현지랜드의 투명한 견적, 다이렉트 견적을 지향</li>
+            <li>✔ 여행사 중간마진 없이, 현지 다이렉트 최저가!</li>
+            <li>✔ 같은 반얀트리라도 일정 짜는 방식에 따라 가격이 완전히 달라집니다</li>
+            <li>✔ 가족여행은 아무거나 예약보다 제대로 짜는 게 핵심</li>
+            <li>✔ 돌려 말하지 않는 투명견적, 현지에서 바로 드립니다</li>
           </ul>
 
          
           <p className="mt-2 text-sm leading-relaxed text-gray-700">
-            신혼여행, 가족여행 상품 · 동선까지 다이렉트,
+            신혼여행도 가족여행도, 상품부터 동선까지 다이렉트로 보고
             <span className="font-semibold text-gray-900">
-              {" "}온라인 최저가 비교 기준으로 가장 유리하게 
+              {" "}같은 여행이라도 더 낮은 가격, 더 좋은 조건으로 뒤집어드립니다
             </span>
-            제안합니다.
+            
           </p>
         </div>
 

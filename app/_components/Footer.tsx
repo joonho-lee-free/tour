@@ -6,33 +6,33 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           {/* 사업자 정보 */}
           <div className="text-sm text-gray-600">
-            <div className="text-base font-extrabold text-gray-900">이가에프엔비</div>
+            <div className="text-base font-extrabold text-gray-900">주식회사 허니예스</div>
             <div className="mt-3 space-y-1">
               <div>
-                <span className="font-semibold text-gray-900">상호명</span> : 이가에프엔비
+                <span className="font-semibold text-gray-900">상호명</span> : 주식회사 허니예스
               </div>
               <div>
-                <span className="font-semibold text-gray-900">대표</span> : 이준호
+                <span className="font-semibold text-gray-900">대표</span> : 하정일
               </div>
               <div>
-                <span className="font-semibold text-gray-900">공장주소</span> : 부산광역시 강서구 낙동북로 31번길 19
+                <span className="font-semibold text-gray-900">사무실주소</span> : 울산광역시 남구 번영로 246번길 10(삼산동)
               </div>
               <div>
-                <span className="font-semibold text-gray-900">사업자등록번호</span> : 408-30-91599
+                <span className="font-semibold text-gray-900">사업자등록번호</span> : 610-81-98197
               </div>
               <div>
-                <span className="font-semibold text-gray-900">통신판매업신고</span> : 2022-부산남구-0330
+                <span className="font-semibold text-gray-900">통신판매업신고</span> : 2022-울산남구-0330
               </div>
               <div>
-                <span className="font-semibold text-gray-900">개인정보책임자</span> : 이준호
+                <span className="font-semibold text-gray-900">개인정보책임자</span> : 하정일
               </div>
               <div>
-                <span className="font-semibold text-gray-900">E-mail</span> : onlyjune@nate.com
+                <span className="font-semibold text-gray-900">E-mail</span> : hajipower@naver.com
               </div>
             </div>
 
             <div className="mt-4 text-xs text-gray-400">
-              © 이가에프엔비. All rights reserved.
+              © 허니예스. All rights reserved.
             </div>
           </div>
 
@@ -40,20 +40,20 @@ export default function Footer() {
           <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
             <div className="text-sm font-bold text-gray-900">고객센터</div>
             <div className="mt-2 text-2xl font-extrabold tracking-tight text-gray-900">
-              051-714-3396
+              052-227-6464
             </div>
             <div className="mt-2 text-sm text-gray-600">
               평일: 09:00 ~ 22:00
               <br />
               작성 즉시 담당자가 연락드려요
               <br />
-              주말 및 공휴일 휴무
+              주말 및 공휴일 조건근무
             </div>
 
             <div className="mt-4 space-y-2">
               {/* 전화 */}
               <a
-                href="tel:0517143396"
+                href="tel:0522276464"
                 className="inline-flex w-full items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-sm font-semibold text-white"
               >
                 전화하기
@@ -74,10 +74,10 @@ export default function Footer() {
             <div className="text-sm font-bold text-gray-900">입금 계좌안내</div>
             <div className="mt-3 space-y-1 text-sm text-gray-700">
               <div>
-                <span className="font-semibold text-gray-900">기업은행</span> 256-117020-01-012
+                <span className="font-semibold text-gray-900">농협은행</span> 302-0203-2665-01
               </div>
               <div>
-                <span className="font-semibold text-gray-900">예금주</span> : 이가FNB(이준호)
+                <span className="font-semibold text-gray-900">예금주</span> : 하정일((주)허니예스)
               </div>
             </div>
 

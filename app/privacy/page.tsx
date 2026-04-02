@@ -5,7 +5,7 @@ export default function PrivacyPage() {
 
       <section className="space-y-6 text-sm leading-relaxed">
         <p>
-          이가에프엔비(이하 “회사”)는 「개인정보 보호법」을 준수하며,
+          주식회사 허니예스(이하 “회사”)는 「개인정보 보호법」을 준수하며,
           고객의 개인정보를 중요하게 생각하고 보호하기 위해
           다음과 같은 개인정보처리방침을 수립·공개합니다.
         </p>

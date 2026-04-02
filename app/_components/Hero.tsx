@@ -54,21 +54,21 @@ export default function Hero({
 
           <p className="mt-4 text-base leading-relaxed text-gray-700 md:text-lg">
             <span className="font-semibold text-gray-900">
-              코사무이 현지랜드 다이렉트 상품
+              비교는 박람회에서, 선택은 현지랜드에서
             </span>
             <br />
             <span className="text-gray-600">
-              코사무이 여행 견적서를 받은분이라면
-              <span className="font-medium text-gray-800"> 중간마진(여행사마진 )없이 </span>
-              <span>재견적받고! 비교해보세요!</span>
+              코사무이! 중간은 빼고, 혜택은 더하고!
+              <span className="font-medium text-gray-800"> 코사무이 현지에서 재견적</span>
+              <span>받아보세요! 답나옵니다!</span>
             </span>
           </p>
 
           <div className="mt-5 space-y-2 text-sm leading-6 text-gray-700 md:text-base">
             <p>
-              항공 · 풀빌라 · 리조트 · 여행일정 현지랜드 장점! 
+              에어텔로 전부 예약하셨다면
               <span className="font-semibold text-gray-900">
-                {" "}<span>빠를면 빠를수록 더 최저가!</span>
+                {" "}<span>공항↔호텔 무료 픽업·샌딩! 무료입니다!</span>
               </span>
              
             </p>
@@ -114,11 +114,11 @@ export default function Hero({
 
          
           <p className="mt-4 text-sm text-gray-600">
-            ※ 실시간 항공/호텔 상황에 따라 요금은 변동될 수 있으며,
+            ※ 코사무이는 교통이 편한 곳이 아닙니다.
             <span className="font-semibold text-gray-900">
-              {" "}상담 시 가장 유리한 조건으로 견적내
+              {" "}무료 픽업·샌딩, 있을 때 안 타면 손해
             </span>
-             드립니다.
+             입니다.
           </p>
         </div>
 

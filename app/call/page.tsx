@@ -29,7 +29,7 @@ export default function CallRedirectPage() {
 
     // 3) 잠깐 기다렸다가 전화 앱으로 이동 (전송 성공률↑)
     const t1 = setTimeout(() => {
-      window.location.href = "tel:051-714-3396";
+      window.location.href = "tel:052-227ㅁㄴ-6464";
     }, 300);
 
     // UI용 카운트다운(선택)
@@ -57,7 +57,7 @@ export default function CallRedirectPage() {
       </p>
 
       <a
-        href="tel:051-714-3396"
+        href="tel:052-227-6464"
         style={{
           display: "inline-block",
           padding: "12px 16px",
