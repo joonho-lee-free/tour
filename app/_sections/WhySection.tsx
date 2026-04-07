@@ -3,10 +3,10 @@
 import { useEffect, useMemo, useState } from "react";
 
 const WHY_IMAGES = [
-  { src: "/images/whysection/why-01.jpg", alt: "코사무이 오션뷰 리조트", label: "차웽비치 불쇼" },
-  { src: "/images/whysection/why-02.jpg", alt: "코사무이 풀빌라", label: "액티비티" },
-  { src: "/images/whysection/why-03.jpg", alt: "코사무이 선셋 다이닝", label: "선셋" },
-  { src: "/images/whysection/why-04.jpg", alt: "코사무이 휴양 일정", label: "휴양형 일정" },
+  { src: "/images/whysection/why-01.jpg", alt: "코사무이 오션뷰 리조트", label: "무료특전" },
+  { src: "/images/whysection/why-02.jpg", alt: "코사무이 풀빌라", label: "허니문특전" },
+  { src: "/images/whysection/why-03.jpg", alt: "코사무이 선셋 다이닝", label: "얼리버드할인" },
+  { src: "/images/whysection/why-04.jpg", alt: "코사무이 휴양 일정", label: "풀빌라할인" },
 ] as const;
 
 export default function WhySection() {
