@@ -1,29 +1,33 @@
 "use client";
 
 import { useMemo } from "react";
-import FitForSection from "./FitForSection";
-import WhySection from "./WhySection";
-import ProductSection from "./ProductSection";
+import SubsidyDemolitionSection from "./SubsidyDemolitionSection";
+import SubsidyCalculator from "../_components/SubsidyCalculator";
+import BeforeAfterSection from "../_components/BeforeAfterSection";
+import HaccpSection from "./HaccpSection";
+import RepairSection from "./RepairSection";
+import PortfolioSection from "./PortfolioSection";
 import ProcessSection from "./ProcessSection";
-import OrderGoSection from "./OrderGoSection";
-import MarketingSection from "./MarketingSection";
+import WhySection from "./WhySection";
 
 export default function BodyCardsSection() {
   const items = useMemo(
     () => [
-      { key: "fit", node: <FitForSection /> },
-      { key: "why", node: <WhySection /> },
-      { key: "product", node: <ProductSection /> },
-      { key: "marketing", node: <MarketingSection /> },
-      { key: "ordergo", node: <OrderGoSection /> },
+      { key: "demolition", node: <SubsidyDemolitionSection /> },
+      { key: "calculator", node: <SubsidyCalculator /> },
+      { key: "beforeafter", node: <BeforeAfterSection /> },
+      { key: "haccp", node: <HaccpSection /> },
+      { key: "repair", node: <RepairSection /> },
+      { key: "portfolio", node: <PortfolioSection /> },
       { key: "process", node: <ProcessSection /> },
+      { key: "why", node: <WhySection /> },
     ],
     []
   );
 
   return (
-    <section className="mx-auto w-full max-w-6xl px-4 pb-12 md:px-8">
-      <div className="grid gap-10 md:gap-12">
+    <section className="mx-auto w-full max-w-6xl px-4 pb-8 md:px-8">
+      <div className="grid gap-8 md:gap-10">
         {items.map((it) => (
           <div key={it.key}>{it.node}</div>
         ))}

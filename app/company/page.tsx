@@ -1,126 +1,101 @@
 export const metadata = {
-  title: "회사소개 | 허니예스",
+  title: "회사소개 | 전문 철거 & HACCP · 전기/시설보수 센터",
   description:
-    "허니예스는 코사무이 여행을 더 유리하게 설계하는 프리미엄 여행 파트너입니다. 현지 파트너 N TOUR와 함께 허니문, 가족여행, 리조트, 투어, 공항 픽업까지 다이렉트로 제안합니다.",
+    "상가·사무실·공장 전문 철거, 소상공인 점포 원상복구 정부 보조금 최대 600만원 지원 신청! HACCP 공사, 전기공사(승압/배선), 시설 보수 리모델링 전문 시공기업",
 };
 
 const strengths = [
   {
-    title: "중간마진 없이 다이렉트",
-    desc: "여행사 중간 유통을 줄이고, 현지와 직접 연결해 온라인 최저가 비교 기준으로 가장 유리한 조건을 제안합니다.",
+    title: "정부 보조금 600만 원 지원 대행",
+    desc: "희망리턴패키지 등 소상공인 점포철거 정부 지원금 자격 무료 조회 및 증빙 서류 작성부터 신청까지 100% 케어해 드립니다.",
   },
   {
-    title: "같은 리조트도 견적은 다릅니다",
-    desc: "같은 반얀트리라도 일정 구성, 행사 포함 여부, 차량 동선에 따라 견적 차이는 크게 달라집니다.",
+    title: "하도급 없는 직영 시공팀",
+    desc: "전문 철거, HACCP 위생 판넬/에폭시 시공, 전기 승압 및 방수 보수까지 외주 없이 직영 인력이 책임지고 기술 시공합니다.",
   },
   {
-    title: "가족여행은 설계가 핵심",
-    desc: "가족여행은 단순 예약보다 동선, 일정, 리조트, 이동 편의까지 맞춤으로 설계하는 것이 만족도를 바꿉니다.",
+    title: "안전 기준 & 법적 규격 준수",
+    desc: "소음/진동 최소화 전문 장비 사용, HACCP 인증 식약처 규격 및 전기안전공사 검범 기준을 철저히 충족합니다.",
   },
   {
-    title: "투명한 현지 다이렉트 견적",
-    desc: "허니예스는 돌려 말하지 않는 견적, 숨김 없는 조건 안내, 실제 여행에 맞는 실속형 구성을 지향합니다.",
-  },
-];
-
-const bookingBenefits = [
-  {
-    title: "에어텔 고객",
-    price: "무료",
-    desc: "호텔+항공을 직접 온라인으로 예약하신 경우, 공항 ↔ 리조트 무료 픽업·샌딩 서비스를 제공합니다.",
-  },
-  {
-    title: "호텔+행사 예약 고객",
-    price: "50,000원",
-    desc: "호텔과 행사 예약을 맡겨주신 고객님께는 50,000원에 차량지원까지 함께 제공해드립니다.",
-  },
-  {
-    title: "항공+호텔+행사 예약 고객",
-    price: "최저가 견적",
-    desc: "항공, 호텔, 행사까지 함께 진행하시면 전체 조합 기준으로 가장 유리한 견적을 우선 제안합니다.",
+    title: "무료 방문견적 & 사후 보증",
+    desc: "현장 무료 방문으로 세부 투명 견적서를 제안 드리며, 시공 완료 후 철저한 사후 A/S 보증을 실천합니다.",
   },
 ];
 
 const services = [
-  "코사무이 허니문 맞춤 설계",
-  "가족여행 / 효도여행 일정 구성",
-  "프리미엄 리조트 · 풀빌라 제안",
-  "공항 픽업 · 샌딩 및 차량지원",
-  "요트 · 호핑 · 스냅 · 스파 등 현지 투어",
-  "현지 실시간 응대 및 일정 케어",
+  "전문 철거 & 점포 원상복구 공사",
+  "소상공인 철거 정부보조금(최대 600만) 대행",
+  "HACCP 인증 식품공장 & 클린룸 시공",
+  "위생 판넬, 에폭시 바닥, 에어샤워 설치",
+  "한전 전기 승압 공사 & 동력배선 시공",
+  "옥상 / 외벽 우레탄 방수 & 균열 보수",
+  "상가 · 사무실 · 공장 시설 리모델링",
+  "전국 무상 현장 방문 견적 안내",
 ];
 
 const processSteps = [
   {
     step: "01",
-    title: "상담",
-    desc: "여행 목적, 예산, 인원, 원하는 리조트와 일정 방향을 먼저 파악합니다.",
+    title: "상담 & 무료 방문",
+    desc: "현장 무료 방문으로 철거/시공 범위를 진단하고 정부 보조금 수혜 대상 여부를 확인합니다.",
   },
   {
     step: "02",
-    title: "설계",
-    desc: "허니문/가족여행 성격에 맞춰 리조트, 행사, 차량, 동선을 가장 효율적으로 구성합니다.",
+    title: "설계 & 투명 견적",
+    desc: "HACCP 위생 동선, 철거 공정, 전기 승압 계산을 통해 합리적이고 투명한 세부 견적을 안내합니다.",
   },
   {
     step: "03",
-    title: "견적 제안",
-    desc: "온라인 최저가 비교 기준으로 가장 유리한 다이렉트 견적을 제안합니다.",
+    title: "보조금 서류 준비",
+    desc: "점포 철거 지원금 증빙 서류와 공사 과업 사진을 작성 및 지원하여 신청을 돕습니다.",
   },
   {
     step: "04",
-    title: "예약 확정",
-    desc: "선택하신 구성으로 예약을 진행하고, 필요한 안내사항을 정확하게 전달합니다.",
+    title: "정밀 안전 시공",
+    desc: "소음·진동 최소화 전문 철거 및 HACCP/전기/보수 직영 시공팀이 안전하게 공사를 진행합니다.",
   },
   {
     step: "05",
-    title: "현지 케어",
-    desc: "코사무이 현지 파트너와 함께 공항 미팅, 픽업, 행사, 일정 진행까지 끝까지 챙겨드립니다.",
+    title: "준공 검사 & 사후 AS",
+    desc: "원상복구 승인, HACCP/전기 검사 완료 및 보조금 수령 확인 후 철저한 하자보수를 보증합니다.",
   },
 ];
 
 export default function CompanyPage() {
   return (
-    <main className="bg-white text-gray-800">
+    <main className="bg-white text-slate-800">
       {/* HERO */}
-      <section className="border-b border-slate-200 bg-gradient-to-b from-sky-50 via-white to-white">
+      <section className="border-b border-slate-200 bg-gradient-to-b from-slate-900 via-slate-850 to-slate-900 text-white">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center rounded-full border border-sky-200 bg-white px-4 py-2 text-xs font-semibold tracking-wide text-sky-700">
-              HONEY YES · KOH SAMUI TRAVEL BRAND
+            <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-500/20 px-4 py-2 text-xs font-bold text-amber-400">
+              BUILDING & DEMOLITION & HACCP & ELECTRIC CENTER
             </div>
 
-            <h1 className="mt-6 text-3xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
-              허니예스는
-              <br className="hidden md:block" />
-              코사무이 여행을 더 유리하게 설계합니다
+            <h1 className="mt-6 text-3xl font-black tracking-tight text-white md:text-5xl leading-tight">
+              전문 철거 · 원상복구 (보조금 600만)
+              <br />
+              HACCP공사 & 전기/시설보수 전문기업
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-gray-700 md:text-lg">
-              허니예스는 신혼여행부터 가족여행까지,
-              <span className="font-semibold text-slate-900">
-                {" "}상품과 동선까지 다이렉트로 설계해
-              </span>
-              {" "}온라인 최저가 비교 기준으로 가장 유리한 조건을 제안하는 여행 파트너입니다.
-            </p>
-
-            <p className="mt-4 max-w-3xl text-sm leading-7 text-gray-600 md:text-base">
-              한국에서의 상담과 설계는 허니예스가 중심이 되고,
-              코사무이 현지에서는 파트너 네트워크를 통해 픽업, 행사, 투어, 일정 진행까지
-              실질적인 여행 운영을 연결합니다.
+            <p className="mt-6 max-w-3xl text-base leading-8 text-slate-300 md:text-lg">
+              <strong className="font-black text-amber-400">李家(이가) / 이가에프엔비</strong>는 상가·사무실·공장 전문 철거와 점포 원상복구시
+              <span className="font-bold text-amber-400"> 국가에서 제공하는 소상공인 정부 보조금(최대 600만 원까지)</span> 자격 조회부터 서류 작성, 사진 증빙 및 절차를 100% 지원하는 <strong className="text-white">전문 대행 컨설팅 & 직영 철거·시공 기업</strong>입니다.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="/#sms-lead"
-                className="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+                className="inline-flex items-center justify-center rounded-xl bg-amber-500 px-5 py-3 text-sm font-black text-slate-900 transition hover:bg-amber-400"
               >
-                견적 상담받기
+                무료 방문견적 & 보조금 신청
               </a>
               <a
-                href="tel:0522276464"
-                className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50"
+                href="tel:0517143396"
+                className="inline-flex items-center justify-center rounded-xl border border-slate-600 bg-slate-800 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-700"
               >
-                전화 상담하기
+                📞 전화 상담 (051-714-3396)
               </a>
             </div>
           </div>
@@ -131,30 +106,20 @@ export default function CompanyPage() {
       <section className="mx-auto max-w-6xl px-6 py-16 md:px-8">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
-            <div className="text-sm font-bold text-sky-700">ABOUT HONEY YES</div>
-            <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
-              단순 예약보다
-              <br className="hidden md:block" />
-              여행 설계가 더 중요합니다
+            <div className="text-xs font-bold text-amber-600">ABOUT COMPANY</div>
+            <h2 className="mt-3 text-2xl font-black tracking-tight text-slate-900 md:text-4xl">
+              믿을 수 있는 기술력과
+              <br />
+              정직한 시공을 약속드립니다
             </h2>
           </div>
 
-          <div className="space-y-4 text-sm leading-7 text-gray-700 md:text-base">
+          <div className="space-y-4 text-sm leading-7 text-slate-700 md:text-base">
             <p>
-              코사무이는 같은 리조트를 가더라도 어떻게 조합하느냐에 따라
-              가격, 이동 편의, 만족도가 완전히 달라지는 여행지입니다.
+              철거와 원상복구는 단순 부수는 작업이 아닌, **건물 구조 안전**과 **임대인 검수 완벽 승인**, 그리고 **정부 지원금 최대 활용**이 결합되어야 비로소 성공적입니다.
             </p>
             <p>
-              허니예스는 단순히 상품을 나열하는 방식보다,
-              고객의 여행 목적에 맞춰 리조트와 일정, 차량, 행사, 현지 동선을
-              가장 효율적으로 맞추는 방식을 지향합니다.
-            </p>
-            <p>
-              그래서 허니예스의 회사소개는 “어디를 예약하느냐”보다
-              <span className="font-semibold text-slate-900">
-                {" "}“누가 여행을 설계해주느냐”가 결과를 바꾼다
-              </span>
-              는 믿음에서 시작합니다.
+              당사는 철거비 부담을 덜어드리는 **소상공인 정부보조금(최대 600만 원)** 지원 서류 대행부터, 식품공장 HACCP 인증 판넬/바닥 시공, 전기 승압 및 동력 배선, 옥상/외벽 방수 보수까지 통합 직영 인력으로 해결합니다.
             </p>
           </div>
         </div>
@@ -163,9 +128,9 @@ export default function CompanyPage() {
       {/* CORE STRENGTHS */}
       <section className="mx-auto max-w-6xl px-6 pb-16 md:px-8">
         <div className="mb-8">
-          <div className="text-sm font-bold text-sky-700">WHY HONEY YES</div>
-          <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
-            허니예스가 강한 이유
+          <div className="text-xs font-bold text-amber-600">WHY CHOOSE US</div>
+          <h2 className="mt-2 text-2xl font-black tracking-tight text-slate-900 md:text-4xl">
+            저희를 선택해야 하는 4가지 핵심 이유
           </h2>
         </div>
 
@@ -175,109 +140,30 @@ export default function CompanyPage() {
               key={item.title}
               className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
             >
-              <div className="text-lg font-extrabold text-slate-900">{item.title}</div>
-              <p className="mt-3 text-sm leading-7 text-gray-600">{item.desc}</p>
+              <div className="text-base font-black text-slate-900">{item.title}</div>
+              <p className="mt-3 text-xs leading-relaxed text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* BENEFITS */}
-      <section className="bg-slate-50">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:px-8">
-          <div className="mb-8">
-            <div className="text-sm font-bold text-sky-700">BOOKING BENEFITS</div>
-            <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
-              예약 조합이 다르면,
-              <br className="hidden md:block" />
-              혜택도 다르게 챙겨드립니다
-            </h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {bookingBenefits.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-              >
-                <div className="text-sm font-bold text-sky-700">{item.title}</div>
-                <div className="mt-3 text-2xl font-extrabold tracking-tight text-slate-900">
-                  {item.price}
-                </div>
-                <p className="mt-4 text-sm leading-7 text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-6 text-sm leading-7 text-gray-600">
-            코사무이는 교통과 현지 동선이 생각보다 중요한 여행지입니다.
-            허니예스는 예약 상태에 따라 가장 체감되는 혜택부터 먼저 챙겨드립니다.
-          </p>
-        </div>
-      </section>
-
-      {/* COLLAB SECTION */}
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8">
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-            <div className="text-sm font-bold text-sky-700">HONEY YES</div>
-            <h3 className="mt-3 text-2xl font-extrabold text-slate-900">
-              상담과 설계의 중심
-            </h3>
-            <ul className="mt-5 space-y-3 text-sm leading-7 text-gray-700">
-              <li>✔ 고객 목적에 맞는 여행 방향 제안</li>
-              <li>✔ 허니문 / 가족여행 / 효도여행 맞춤 설계</li>
-              <li>✔ 리조트 · 행사 · 차량 동선 조합 최적화</li>
-              <li>✔ 온라인 최저가 비교 기준의 유리한 견적 제안</li>
-              <li>✔ 예약 전후 안내와 커뮤니케이션 총괄</li>
-            </ul>
-          </div>
-
-          <div className="rounded-3xl border border-slate-200 bg-sky-50 p-8 shadow-sm">
-            <div className="text-sm font-bold text-sky-700">LOCAL PARTNER</div>
-            <h3 className="mt-3 text-2xl font-extrabold text-slate-900">
-              코사무이 현지 실행 네트워크
-            </h3>
-            <ul className="mt-5 space-y-3 text-sm leading-7 text-gray-700">
-              <li>✔ 공항 픽업 · 샌딩 및 현지 차량 운영</li>
-              <li>✔ 리조트 체크인, 행사, 투어 진행 연결</li>
-              <li>✔ 허니문 / 가족여행 맞춤 현지 일정 운영</li>
-              <li>✔ 현지 상황에 맞춘 빠른 일정 대응</li>
-              <li>✔ 여행 중 필요한 순간 실질적인 현장 케어</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-8 rounded-3xl border border-slate-200 bg-slate-900 p-8 text-white">
-          <div className="text-sm font-bold text-sky-300">COLLABORATION</div>
-          <p className="mt-3 text-lg font-semibold leading-8 md:text-xl">
-            허니예스는 앞단의 상담과 견적, 여행 설계를 책임지고
-            현지 파트너 네트워크는 코사무이에서의 실제 운영을 책임집니다.
-          </p>
-          <p className="mt-3 text-sm leading-7 text-slate-300 md:text-base">
-            즉, 고객 입장에서는 허니예스 중심으로 상담받되
-            현지에서는 검증된 운영력과 밀착 대응을 함께 누릴 수 있는 구조입니다.
-          </p>
-        </div>
-      </section>
-
       {/* SERVICES */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 pb-16 md:px-8">
+      <section className="bg-slate-50 py-16">
+        <div className="mx-auto max-w-6xl px-6 md:px-8">
           <div className="mb-8">
-            <div className="text-sm font-bold text-sky-700">SERVICES</div>
-            <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
-              주요 서비스
+            <div className="text-xs font-bold text-amber-600">OUR SERVICES</div>
+            <h2 className="mt-2 text-2xl font-black tracking-tight text-slate-900 md:text-4xl">
+              주요 사업 영역
             </h2>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
               <div
                 key={service}
-                className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 text-sm font-semibold text-slate-900"
+                className="rounded-2xl border border-slate-200 bg-white px-5 py-4 text-xs font-bold text-slate-900 shadow-xs"
               >
-                {service}
+                ✔ {service}
               </div>
             ))}
           </div>
@@ -285,52 +171,43 @@ export default function CompanyPage() {
       </section>
 
       {/* PROCESS */}
-      <section className="bg-slate-50">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:px-8">
-          <div className="mb-8">
-            <div className="text-sm font-bold text-sky-700">PROCESS</div>
-            <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
-              허니예스 진행 방식
-            </h2>
-          </div>
+      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8">
+        <div className="mb-8">
+          <div className="text-xs font-bold text-amber-600">WORKFLOW</div>
+          <h2 className="mt-2 text-2xl font-black tracking-tight text-slate-900 md:text-4xl">
+            원스톱 공사 진행 순서
+          </h2>
+        </div>
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-            {processSteps.map((item) => (
-              <div
-                key={item.step}
-                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-              >
-                <div className="text-sm font-extrabold text-sky-700">{item.step}</div>
-                <div className="mt-2 text-lg font-extrabold text-slate-900">{item.title}</div>
-                <p className="mt-3 text-sm leading-7 text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+          {processSteps.map((item) => (
+            <div
+              key={item.step}
+              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+            >
+              <div className="text-sm font-black text-amber-600">{item.step}</div>
+              <div className="mt-2 text-base font-bold text-slate-900">{item.title}</div>
+              <p className="mt-2 text-xs leading-relaxed text-slate-600">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* COMPANY INFO */}
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8">
+      <section className="mx-auto max-w-6xl px-6 pb-20 md:px-8">
         <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-          <div className="text-sm font-bold text-sky-700">COMPANY INFO</div>
-          <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-slate-900">
-            회사 정보
+          <div className="text-xs font-bold text-amber-600">COMPANY INFO</div>
+          <h2 className="mt-2 text-2xl font-black tracking-tight text-slate-900">
+            사업자 기본 정보 & 계좌안내
           </h2>
 
-          <div className="mt-8 grid gap-4 text-sm leading-7 text-gray-700 md:grid-cols-2">
-            <div><span className="font-bold text-slate-900">상호명</span> : 주식회사 허니예스</div>
-            <div><span className="font-bold text-slate-900">대표</span> : 하정일</div>
-            <div><span className="font-bold text-slate-900">사무실주소</span> : 울산광역시 남구 번영로 246번길 10(삼산동)</div>
-            <div><span className="font-bold text-slate-900">사업자등록번호</span> : 610-81-98197</div>
-            <div><span className="font-bold text-slate-900">통신판매업신고</span> : 2022-울산남구-0330</div>
-            <div><span className="font-bold text-slate-900">E-mail</span> : hajipower@naver.com</div>
-          </div>
-
-          <div className="mt-8 rounded-2xl bg-slate-50 p-5 text-sm leading-7 text-gray-600">
-            허니예스는 코사무이 여행을 상담부터 설계, 견적, 예약, 현지 연결까지
-            한 번에 정리해드리는 여행 파트너입니다.
-            <br />
-            화려한 말보다, 실제 여행이 더 편하고 더 유리해지는 구성을 제안하겠습니다.
+          <div className="mt-6 grid gap-4 text-xs leading-relaxed text-slate-700 md:grid-cols-2">
+            <div><span className="font-bold text-slate-900">상호명</span> : 이가에프엔비</div>
+            <div><span className="font-bold text-slate-900">대표자</span> : 이준호</div>
+            <div><span className="font-bold text-slate-900">사무실 주소</span> : 부산시 강서구 낙동북로 31번길 19 이가에프엔비</div>
+            <div><span className="font-bold text-slate-900">사업자등록번호</span> : 408-30-91599</div>
+            <div><span className="font-bold text-slate-900">전화번호</span> : 051-714-3396</div>
+            <div><span className="font-bold text-slate-900">입금 계좌</span> : 기업은행 256-117020-01-012 (예금주: 이준호(이가에프엔비))</div>
           </div>
         </div>
       </section>

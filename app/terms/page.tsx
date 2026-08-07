@@ -5,7 +5,7 @@ export default function TermsPage() {
 
       <section className="space-y-6 text-sm leading-relaxed">
         <p>
-          본 약관은 주식회사 허니예스(이하 “회사”)가 제공하는 웹사이트 및 관련
+          본 약관은 이가에프엔비(이하 “회사”)가 제공하는 웹사이트 및 관련
           서비스(이하 “서비스”)의 이용과 관련하여 회사와 이용자 간의 권리, 의무,
           책임사항 및 기타 필요한 사항을 규정합니다.
         </p>

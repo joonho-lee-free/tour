@@ -17,17 +17,16 @@ function shortErr(err: any) {
 
 function detectInquiryType(message: string) {
   const m = (message || "").toLowerCase();
-  if (/(허니문|신혼여행|커플|풀빌라|스냅)/.test(m)) return "허니문 문의";
-  if (/(가족여행|가족|아이|아동|부모님)/.test(m)) return "가족여행 문의";
-  if (/(호텔|리조트|콘래드|반얀트리|실라와디|통사이베이|킴튼|인터컨|피스|치사무이)/.test(m))
-    return "호텔 문의";
-  if (/(일정|일정표|투어|호핑|요트|마사지|사파리|짚라인|스냅사진)/.test(m))
-    return "일정/투어 문의";
-  if (/(단가|가격|견적|비용|예산|얼마|금액)/.test(m)) return "견적/비용 문의";
-  if (/(항공|출발|부산출발|인천출발|날짜|출국|귀국)/.test(m)) return "출발일/항공 문의";
-  if (/(픽업|샌딩|공항|이동|차량)/.test(m)) return "공항이동 문의";
-  if (/(예약|확정|가능|자리|객실)/.test(m)) return "예약가능 문의";
-   return "기타 문의";
+  if (/(철거|원상복구|보조금|지원금|600만|희망리턴|소상공인|폐업|점포)/.test(m))
+    return "전문철거/보조금 600만 문의";
+  if (/(haccp|해썹|식품공장|클린룸|판넬|에폭시|위생)/.test(m))
+    return "HACCP공사 문의";
+  if (/(전기|승압|동력|차단기|분전반|배선|조명|누전)/.test(m))
+    return "전기공사 문의";
+  if (/(보수|방수|옥상|외벽|크랙|균열|수리|리모델링)/.test(m))
+    return "시설보수/방수 문의";
+  if (/(견적|비용|가격|방문|상담)/.test(m)) return "무료방문견적 문의";
+  return "기타 시공 문의";
 }
 
 function detectRegion(message: string) {
@@ -313,11 +312,11 @@ export async function POST(req: Request) {
      * - 공개용 마스킹(maskPhone)은 Firestore public_leads 쪽에서만 유지
      */
     const text =
-      `【이가에프엔비 문자문의】\n` +
-      `상호: ${storeName}\n` +
-      `연락처: ${formatPhoneFull(phoneDigits) || phone}\n` + // ✅ 여기만 “전체 연락처”로 변경
+      `【철거/보조금600만/HACCP/전기/보수 견적문의】\n` +
+      `성함/상호: ${storeName}\n` +
+      `연락처: ${formatPhoneFull(phoneDigits) || phone}\n` +
       `지역: ${regionSafe}\n` +
-      `문의: ${inquiryTypeSafe}\n` +
+      `문의분야: ${inquiryTypeSafe}\n` +
       `내용: ${messageSafe}\n` +
       (source ? `출처: ${source}\n` : "");
 

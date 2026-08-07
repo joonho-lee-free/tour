@@ -10,186 +10,57 @@ const WHY_IMAGES = [
 ] as const;
 
 export default function WhySection() {
-  const [play, setPlay] = useState(false);
-  const [openImage, setOpenImage] = useState<string | null>(null);
-
-  const YOUTUBE_ID = "JhwFjpr4bzU";
-
-  const thumbUrl = useMemo(
-    () => `https://img.youtube.com/vi/${YOUTUBE_ID}/hqdefault.jpg`,
-    [YOUTUBE_ID]
-  );
-
-  useEffect(() => {
-    if (!openImage) return;
-
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpenImage(null);
-    };
-
-    document.addEventListener("keydown", onKeyDown);
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = prevOverflow;
-    };
-  }, [openImage]);
+  const strengths = [
+    {
+      icon: "💰",
+      title: "정부 보조금 600만 원 환급 서류 100% 무료 대행",
+      desc: "소상공인 철거 보조금 서류 작성부터 증빙 사진 촬영까지 李家(이가)가 무료 대행! 손 안 대고 코 풉니다!",
+    },
+    {
+      icon: "🔨",
+      title: "철거 ➔ HACCP ➔ 전기 ➔ 방수 무한 직영 파워",
+      desc: "따로따로 불러서 출장비만 수백 만원 뜯기지 마세요! 오얏나무 가문 李家 전문 직영팀이 한 방에 해결!",
+    },
+    {
+      icon: "⚡",
+      title: "한전 승압 & 3상 동력전기 불패 신화",
+      desc: "과부하 누전 100% 차단! 전기안전공사 검사 합격률 100%에 빛나는 짱짱한 전기 시공 기술력!",
+    },
+    {
+      icon: "🛡️",
+      title: "출장 방문견적 0원 & 철저한 사후 AS 보증",
+      desc: "찔러보기 견적 환영! 현장 방문 견적 0원! 공사 완료 후 물 세거나 문제 생기면 끝까지 책임 A/S!",
+    },
+  ];
 
   return (
-    <div className="group rounded-2xl border border-emerald-100 bg-emerald-50/40 p-6 ring-1 ring-emerald-100 transition-all duration-200 ease-out hover:-translate-y-1 hover:border-emerald-200 hover:bg-emerald-50/60 hover:shadow-lg hover:shadow-emerald-100/50 hover:ring-emerald-200 active:translate-y-0 md:p-8">
-      <style jsx global>{`
-        .ss-why-media-grid {
-          display: grid !important;
-          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-          gap: 8px !important;
-          align-items: stretch !important;
-        }
-        @media (min-width: 768px) {
-          .ss-why-media-grid {
-            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-            gap: 12px !important;
-          }
-        }
-        .ss-why-media-grid > * {
-          min-width: 0 !important;
-          width: auto !important;
-          max-width: none !important;
-        }
-      `}</style>
-
-      <div className="grid gap-6 md:grid-cols-2 md:items-start">
+    <div className="rounded-3xl border-2 border-slate-900 bg-white p-6 shadow-sm md:p-8">
+      <div className="flex items-start justify-between gap-4">
         <div>
-          <div className="flex items-start justify-between gap-4">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800">
-                <span aria-hidden>🌴</span>
-                <span>왜 다이렉트인가</span>
-              </div>
-              <h2 className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
-                다이렉트상품 제안이유
-              </h2>
-            </div>
-
-            <div
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-emerald-600 text-white shadow-sm transition-transform duration-200 ease-out group-hover:scale-105"
-              aria-hidden
-            >
-              🌴
-            </div>
-          </div>
-
-          <ul className="mt-4 grid gap-3 text-sm text-gray-800">
-            <li>✔ 여행사 중간마진 없이, 현지 다이렉트 최저가!</li>
-            <li>✔ 같은 반얀트리라도 일정 짜는 방식에 따라 가격이 완전히 달라집니다</li>
-            <li>✔ 가족여행은 아무거나 예약보다 제대로 짜는 게 핵심</li>
-            <li>✔ 돌려 말하지 않는 투명견적, 현지에서 바로 드립니다</li>
-          </ul>
-
-         
-          <p className="mt-2 text-sm leading-relaxed text-gray-700">
-            신혼여행도 가족여행도, 상품부터 동선까지 다이렉트로 보고
-            <span className="font-semibold text-gray-900">
-              {" "}같은 여행이라도 더 낮은 가격, 더 좋은 조건으로 뒤집어드립니다
-            </span>
-            
+          <span className="rounded-full bg-slate-900 px-3.5 py-1 text-xs font-black text-amber-400">
+            🔥 왜 李家(이가)를 찾아오실까요?
+          </span>
+          <h2 className="mt-2 text-2xl font-black tracking-tight text-slate-900 md:text-3xl">
+            사장님들이 李家(이가)만 찾으시는 4가지 이유
+          </h2>
+          <p className="mt-1 text-xs text-slate-600 md:text-sm">
+            철거비 보조금 600만 원 받아내는 유능함부터 식품공장/전기/방수 파괴 시공력까지!
           </p>
-        </div>
-
-        <div className="overflow-hidden rounded-2xl border border-emerald-100 bg-black ring-1 ring-emerald-100/60">
-          <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
-            {!play ? (
-              <>
-                <img
-                  src={thumbUrl}
-                  alt="코사무이 소개 영상 썸네일"
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover object-center opacity-95"
-                />
-                <div className="absolute inset-0 bg-black/35" />
-                <button
-                  type="button"
-                  onClick={() => setPlay(true)}
-                  className="absolute inset-0 flex items-center justify-center"
-                  aria-label="영상 재생"
-                >
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-sm font-bold text-gray-900 shadow-lg transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]">
-                    ▶ 영상 재생
-                  </div>
-                </button>
-              </>
-            ) : (
-              <iframe
-                className="absolute inset-0 h-full w-full"
-                src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0&modestbranding=1`}
-                title="코사무이 소개 영상"
-                allow="autoplay; encrypted-media; picture-in-picture"
-                allowFullScreen
-              />
-            )}
-          </div>
         </div>
       </div>
 
-      <div className="ss-why-media-grid mt-6">
-        {WHY_IMAGES.map((img) => (
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {strengths.map((item) => (
           <div
-            key={img.src}
-            className="min-w-0 overflow-hidden rounded-xl border border-emerald-100 bg-white/60 ring-1 ring-emerald-100/60"
+            key={item.title}
+            className="rounded-2xl border-2 border-slate-100 bg-slate-50/80 p-5 transition hover:border-amber-500 hover:bg-white"
           >
-            <div className="relative w-full" style={{ aspectRatio: "4 / 3" }}>
-              <img
-                src={img.src}
-                alt={img.alt}
-                loading="lazy"
-                onClick={() => setOpenImage(img.src)}
-                className="absolute inset-0 h-full w-full cursor-zoom-in object-cover object-center"
-              />
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/55 to-transparent" />
-              <div className="absolute bottom-2 right-2 z-10 rounded-md bg-black/35 px-2 py-1 text-xs font-bold text-white backdrop-blur-sm md:bottom-3 md:right-3 md:text-sm">
-                {img.label}
-              </div>
-            </div>
+            <div className="text-3xl">{item.icon}</div>
+            <h3 className="mt-3 text-base font-black text-slate-900">{item.title}</h3>
+            <p className="mt-2 text-xs leading-relaxed text-slate-600">{item.desc}</p>
           </div>
         ))}
       </div>
-
-      <div
-        className="mt-5 h-1 w-full rounded-full bg-emerald-200 transition-opacity duration-200 group-hover:opacity-90"
-        aria-hidden
-      />
-
-      {openImage && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-          onClick={() => setOpenImage(null)}
-          role="dialog"
-          aria-modal="true"
-          aria-label="이미지 확대 보기"
-        >
-          <div className="relative" onClick={(e) => e.stopPropagation()}>
-            <button
-              type="button"
-              onClick={() => setOpenImage(null)}
-              className="absolute -right-3 -top-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-gray-900 shadow-lg ring-1 ring-black/10 transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-              aria-label="닫기"
-            >
-              <span className="text-xl leading-none">×</span>
-            </button>
-
-            <img
-              src={openImage}
-              alt="확대 이미지"
-              className="max-h-[90vh] max-w-[90vw] rounded-lg object-contain shadow-2xl"
-            />
-
-            <div className="mt-3 text-center text-xs text-white/80">
-              배경을 누르거나 <b>ESC</b> 또는 <b>×</b>로 닫을 수 있어요.
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
