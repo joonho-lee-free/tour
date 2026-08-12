@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://haccp4553.vercel.app"),
+  metadataBase: new URL("https://shcom714.com"),
   title: {
     default: "신흥건설 전문 철거공사 · 정부보조금 최대 600만원 | HACCP공사 & 전기/시설보수",
     template: "%s | 신흥건설 전문철거 · HACCP · 전기/시설보수",
