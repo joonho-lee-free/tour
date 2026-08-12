@@ -126,12 +126,6 @@ export default function Hero({
         {/* Right - Hero Banner Container */}
         <div className="relative">
           <div className="relative overflow-hidden rounded-3xl border-2 border-slate-900 bg-slate-950 p-6 text-white shadow-2xl">
-            {/* Real Factory Background Overlay */}
-            <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25 mix-blend-luminosity scale-105"
-              style={{ backgroundImage: `url('/images/company-bg.jpg')` }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-slate-950/70" />
             <div className="absolute right-0 top-0 -mr-16 -mt-16 h-64 w-64 rounded-full bg-amber-500/15 blur-3xl"></div>
             
             <div className="flex items-center justify-between border-b border-slate-700/80 pb-4">

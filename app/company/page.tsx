@@ -65,16 +65,11 @@ const processSteps = [
 export default function CompanyPage() {
   return (
     <main className="bg-white text-slate-800">
-      {/* HERO WITH FACTORY BACKGROUND */}
-      <section className="relative overflow-hidden border-b border-slate-800 bg-slate-950 text-white min-h-[480px] flex items-center">
-        {/* Real Factory Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-luminosity scale-105 transform transition duration-1000 hover:scale-100"
-          style={{ backgroundImage: `url('/images/company-bg.jpg')` }}
-        />
-        {/* Dark Gradient Overlays for High Legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/80" />
+      {/* HERO SECTION */}
+      <section className="relative overflow-hidden border-b border-slate-800 bg-slate-950 text-white min-h-[440px] flex items-center">
+        {/* Dark Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950" />
+        <div className="absolute right-0 top-0 -mr-20 -mt-20 h-96 w-96 rounded-full bg-amber-500/10 blur-3xl" />
 
         <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
           <div className="max-w-4xl">
@@ -131,40 +126,6 @@ export default function CompanyPage() {
             <p>
               당사는 철거비 부담을 덜어드리는 **소상공인 정부보조금(최대 600만 원)** 지원 컨설팅부터, 식품공장 HACCP 인증 판넬/바닥 시공, 전기 승압 및 동력 배선, 옥상/외벽 방수 보수까지 통합 직영 인력으로 해결합니다.
             </p>
-          </div>
-        </div>
-
-        {/* Real Factory Image Card Showcase */}
-        <div className="mt-12 overflow-hidden rounded-3xl border-2 border-slate-900 bg-slate-950 shadow-xl">
-          <div className="grid md:grid-cols-2">
-            <div className="relative min-h-[300px] overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/company-bg.jpg"
-                alt="신흥건설 본사 및 HACCP 식품공장 시설 전경"
-                className="h-full w-full object-cover transition duration-700 hover:scale-105"
-              />
-              <div className="absolute top-4 left-4 rounded-full bg-emerald-600 px-3.5 py-1 text-xs font-black text-white shadow">
-                HACCP 식품안전관리인증 직영 현장
-              </div>
-            </div>
-
-            <div className="flex flex-col justify-center p-8 text-white">
-              <span className="rounded-md bg-amber-500/20 px-3 py-1 text-xs font-black text-amber-400 w-fit">
-                🏢 본사 및 전용 시공 센터 전경
-              </span>
-              <h3 className="mt-3 text-2xl font-black text-white">
-                김해 신흥건설 직영 센터
-              </h3>
-              <p className="mt-3 text-xs leading-relaxed text-slate-300 md:text-sm">
-                경남 김해시 금관대로 119번길 21-13에 위치한 신흥건설 본사 전경입니다.
-                자체 철거 장비 및 HACCP 판넬/전기 자재를 직영 관리하여 거품 없는 공사 단가와 최상의 품질을 보장합니다.
-              </p>
-
-              <div className="mt-6 flex items-center gap-2 text-xs font-bold text-amber-400 border-t border-slate-800 pt-4">
-                <span>📍 주소: 경남 김해시 금관대로 119번길 21-13 신흥건설</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
