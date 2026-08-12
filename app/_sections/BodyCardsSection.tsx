@@ -3,6 +3,7 @@
 import { useMemo } from "react";
 import SubsidyDemolitionSection from "./SubsidyDemolitionSection";
 import SubsidyCalculator from "../_components/SubsidyCalculator";
+import InstagramSection from "./InstagramSection";
 import BeforeAfterSection from "../_components/BeforeAfterSection";
 import HaccpSection from "./HaccpSection";
 import RepairSection from "./RepairSection";
@@ -14,6 +15,7 @@ export default function BodyCardsSection() {
     () => [
       { key: "demolition", node: <SubsidyDemolitionSection /> },
       { key: "calculator", node: <SubsidyCalculator /> },
+      { key: "instagram", node: <InstagramSection /> },
       { key: "beforeafter", node: <BeforeAfterSection /> },
       { key: "haccp", node: <HaccpSection /> },
       { key: "repair", node: <RepairSection /> },

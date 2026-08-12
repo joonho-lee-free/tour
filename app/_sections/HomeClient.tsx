@@ -6,7 +6,6 @@ import Hero from "../_components/Hero";
 import Footer from "../_components/Footer";
 import BodyCardsSection from "./BodyCardsSection";
 import RecentLeadsSection from "./RecentLeadsSection";
-import InstagramSection from "./InstagramSection";
 
 const CALL_PHONE = "051-714-3396";
 const HERO_IMAGE_SRC = "/images/hero-a.png";
@@ -172,9 +171,6 @@ export default function HomeClient({
           </form>
         </div>
       </section>
-
-      {/* Instagram / SNS / Gallery grid */}
-      <InstagramSection />
 
       <Footer />
 
