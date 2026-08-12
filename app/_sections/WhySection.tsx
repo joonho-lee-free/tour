@@ -13,13 +13,13 @@ export default function WhySection() {
   const strengths = [
     {
       icon: "💰",
-      title: "정부 보조금 600만 원 환급 서류 100% 무료 대행",
-      desc: "소상공인 철거 보조금 서류 작성부터 증빙 사진 촬영까지 李家(이가)가 무료 대행! 손 안 대고 코 풉니다!",
+      title: "정부 보조금 600만 원 환급 100% 맞춤 컨설팅",
+      desc: "소상공인 철거 보조금 자격 검수부터 수혜 안내까지 신흥건설이 100% 지원 컨설팅해 드립니다!",
     },
     {
       icon: "🔨",
       title: "철거 ➔ HACCP ➔ 전기 ➔ 방수 무한 직영 파워",
-      desc: "따로따로 불러서 출장비만 수백 만원 뜯기지 마세요! 오얏나무 가문 李家 전문 직영팀이 한 방에 해결!",
+      desc: "따로따로 불러서 출장비만 수백 만원 뜯기지 마세요! 신흥건설 전문 직영팀이 한 방에 해결!",
     },
     {
       icon: "⚡",
@@ -38,10 +38,10 @@ export default function WhySection() {
       <div className="flex items-start justify-between gap-4">
         <div>
           <span className="rounded-full bg-slate-900 px-3.5 py-1 text-xs font-black text-amber-400">
-            🔥 왜 李家(이가)를 찾아오실까요?
+            🔥 왜 신흥건설을 찾아오실까요?
           </span>
           <h2 className="mt-2 text-2xl font-black tracking-tight text-slate-900 md:text-3xl">
-            사장님들이 李家(이가)만 찾으시는 4가지 이유
+            사장님들이 신흥건설만 찾으시는 4가지 이유
           </h2>
           <p className="mt-1 text-xs text-slate-600 md:text-sm">
             철거비 보조금 600만 원 받아내는 유능함부터 식품공장/전기/방수 파괴 시공력까지!

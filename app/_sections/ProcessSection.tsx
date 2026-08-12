@@ -14,8 +14,8 @@ export default function ProcessSection() {
     },
     {
       num: "03",
-      title: "보조금 서류 대행 & 시공 준비",
-      desc: "소상공인 점포철거 보조금 서류 대행 작성 및 안전 시공/철거를 위한 준비 완수",
+      title: "보조금 맞춤 컨설팅 & 시공 준비",
+      desc: "소상공인 점포철거 보조금 수혜 가이드 및 안전 시공/철거를 위한 준비 완수",
     },
     {
       num: "04",
@@ -40,7 +40,7 @@ export default function ProcessSection() {
             원스톱 철거 · 시공 · 보조금 5단계 프로세스
           </h2>
           <p className="mt-1 text-xs text-slate-600 md:text-sm">
-            상담 접수부터 무료 방문견적, 보조금 서류 대행, 안전 시공, 사후 AS 관리까지 체계적으로 진행됩니다.
+            상담 접수부터 무료 방문견적, 보조금 맞춤 컨설팅, 안전 시공, 사후 AS 관리까지 체계적으로 진행됩니다.
           </p>
         </div>
       </div>

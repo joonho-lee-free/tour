@@ -4,7 +4,7 @@ import HomeClient from "./_sections/HomeClient";
 export const metadata: Metadata = {
   title: "전문 철거공사 · 정부보조금 최대 600만원 지원 | HACCP공사 & 전기/시설보수",
   description:
-    "상가·사무실·공장 전문 철거, 점포 원상복구 시 소상공인 정부 보조금 최대 600만원 지원 신청 대행! HACCP 인증 공사, 전기공사(승압/배선/동력), 시설 보수 및 리모델링 전문기업",
+    "상가·사무실·공장 전문 철거, 점포 원상복구 시 소상공인 정부 보조금 최대 600만원 지원 컨설팅! HACCP 인증 공사, 전기공사(승압/배선/동력), 시설 보수 및 리모델링 전문기업",
   alternates: {
     canonical: "https://haccp4553.vercel.app/",
   },

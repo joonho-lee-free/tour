@@ -8,7 +8,6 @@ import BodyCardsSection from "./BodyCardsSection";
 import RecentLeadsSection from "./RecentLeadsSection";
 import InstagramSection from "./InstagramSection";
 
-const KAKAO_CHAT_URL = "http://pf.kakao.com/_TWfbG";
 const CALL_PHONE = "051-714-3396";
 const HERO_IMAGE_SRC = "/images/hero-a.png";
 
@@ -32,7 +31,7 @@ export default function HomeClient({
 
       {/* HERO */}
       <Hero
-        kakaoChatUrl={KAKAO_CHAT_URL}
+        kakaoChatUrl=""
         callPhone={CALL_PHONE}
         heroImageSrc={HERO_IMAGE_SRC}
         leadAnchorId="sms-lead"
@@ -53,15 +52,15 @@ export default function HomeClient({
           <div className="mb-6 flex items-start justify-between">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-amber-400/20 px-3 py-1 text-xs font-black text-amber-400 border border-amber-400/40">
-                <span>🏛️ 소상공인 정부보조금 대행 컨설팅</span>
+                <span>🏛️ 소상공인 정부보조금 지원 컨설팅</span>
                 <span className="h-1 w-1 rounded-full bg-amber-400"></span>
                 <span>0원 찔러보기 환영</span>
               </div>
               <h2 className="mt-3 text-xl font-black text-white md:text-3xl">
-                정부 보조금 최대 600만 원까지! 李家(이가) 자격 조회 & 무료 방문견적
+                정부 보조금 최대 600만 원까지! 신흥건설 자격 조회 & 무료 방문견적
               </h2>
               <p className="mt-1 text-xs text-slate-300 md:text-sm">
-                접수 즉시 李家 보조금 대행 컨설팅팀 & 직영 기술자가 확인 후 신속하게 연락드립니다.
+                접수 즉시 신흥건설 보조금 전문 컨설팅팀 & 직영 기술자가 확인 후 신속하게 연락드립니다.
               </p>
             </div>
 
@@ -75,7 +74,7 @@ export default function HomeClient({
 
           {sent && (
             <div className="mb-6 rounded-2xl border-2 border-emerald-400/40 bg-emerald-500/20 px-5 py-4 text-sm font-black text-emerald-300">
-              ✅ 접수가 완료되었습니다! 李家(이가) 담당자가 빛의 속도로 확인 후 연락드리겠습니다. 🙂
+              ✅ 접수가 완료되었습니다! 신흥건설 담당자가 빛의 속도로 확인 후 연락드리겠습니다. 🙂
             </div>
           )}
 
@@ -95,7 +94,7 @@ export default function HomeClient({
                   name="storeName"
                   required
                   maxLength={40}
-                  placeholder="예: 홍길동 / 이가상가"
+                  placeholder="예: 홍길동 / 신흥상가"
                   className="w-full rounded-xl border border-slate-700 bg-slate-950 px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none focus:ring-2 focus:ring-amber-500"
                 />
               </div>
@@ -125,7 +124,7 @@ export default function HomeClient({
                   <option value="HACCP공사 문의">🏭 HACCP 식품공장 & 클린룸 시공</option>
                   <option value="전기공사 문의">⚡ 전기공사 (한전 승압 / 동력전기 / 배선)</option>
                   <option value="시설보수 및 리모델링 문의">🛠️ 옥상·외벽 철통 방수 / 균열 보수 / 리모델링</option>
-                  <option value="종합 공사 문의">🏗️ 李家 종합 철거 & 시공 문의</option>
+                  <option value="종합 공사 문의">🏗️ 신흥건설 종합 철거 & 시공 문의</option>
                 </select>
               </div>
             </div>
@@ -180,7 +179,7 @@ export default function HomeClient({
       <Footer />
 
       {/* 모바일 및 데스크톱 고정 하단 퀵바 */}
-      <BottomFloatingBar callPhone={CALL_PHONE} kakaoUrl={KAKAO_CHAT_URL} />
+      <BottomFloatingBar callPhone={CALL_PHONE} />
     </main>
   );
 }

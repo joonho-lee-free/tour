@@ -6,20 +6,20 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           {/* 사업자 정보 */}
           <div className="text-xs leading-relaxed text-slate-400">
-            <div className="text-base font-extrabold text-white">李家(이가) 전문 철거 & HACCP · 전기/시설보수 센터</div>
-            <div className="mt-1 font-bold text-amber-400">李家 이가에프엔비 (건축/철거/전기/보수 사업부)</div>
+            <div className="text-base font-extrabold text-white">신흥건설 전문 철거 & HACCP · 전기/시설보수 센터</div>
+            <div className="mt-1 font-bold text-amber-400">신흥건설 (건축/철거/전기/보수 사업부)</div>
             <div className="mt-3 space-y-1">
               <div>
-                <span className="font-semibold text-slate-200">상호명</span> : 李家 (이가에프엔비)
+                <span className="font-semibold text-slate-200">상호명</span> : 신흥건설
               </div>
               <div>
-                <span className="font-semibold text-slate-200">대표자</span> : 이준호
+                <span className="font-semibold text-slate-200">대표자</span> : 이승복
               </div>
               <div>
-                <span className="font-semibold text-slate-200">사무실 주소</span> : 부산시 강서구 낙동북로 31번길 19 이가에프엔비
+                <span className="font-semibold text-slate-200">사무실 주소</span> : 경남 김해시 금관대로 119번길 21-13
               </div>
               <div>
-                <span className="font-semibold text-slate-200">사업자등록번호</span> : 408-30-91599
+                <span className="font-semibold text-slate-200">사업자등록번호</span> : 501-26-30652
               </div>
               <div>
                 <span className="font-semibold text-slate-200">전화번호</span> : 051-714-3396
@@ -28,12 +28,12 @@ export default function Footer() {
 
             <div className="mt-4 rounded-xl bg-slate-950 p-3 text-[11px] text-slate-400">
               <div className="font-bold text-amber-400">입금 계좌 안내</div>
-              <div className="mt-1 text-slate-200 font-bold">기업은행 256-117020-01-012</div>
-              <div>예금주: 이준호(이가에프엔비)</div>
+              <div className="mt-1 text-slate-200 font-bold">기업은행 01087932304</div>
+              <div>예금주: 신흥건설</div>
             </div>
 
             <div className="mt-4 text-[11px] text-slate-500">
-              © 이가에프엔비. All rights reserved.
+              © 신흥건설. All rights reserved.
             </div>
           </div>
 
@@ -95,15 +95,27 @@ export default function Footer() {
         </div>
 
         {/* 하단 메뉴 */}
-        <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-slate-800 pt-6 text-xs text-slate-400">
-          <a className="hover:text-amber-400" href="/company">
-            회사소개
-          </a>
-          <a className="hover:text-amber-400" href="/privacy">
-            개인정보처리방침
-          </a>
-          <a className="hover:text-amber-400" href="/terms">
-            이용약관
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-slate-800 pt-6 text-xs text-slate-400">
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <a className="hover:text-amber-400" href="/company">
+              회사소개
+            </a>
+            <a className="hover:text-amber-400" href="/privacy">
+              개인정보처리방침
+            </a>
+            <a className="hover:text-amber-400" href="/terms">
+              이용약관
+            </a>
+          </div>
+          
+          <a
+            href="https://www.instagram.com/shcom4553"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 font-bold text-amber-400 hover:text-amber-300 transition"
+          >
+            <span>📷 공식 인스타그램 (@shcom4553)</span>
+            <span>➔</span>
           </a>
         </div>
       </div>

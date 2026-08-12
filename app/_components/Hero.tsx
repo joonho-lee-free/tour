@@ -44,7 +44,7 @@ export default function Hero({
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-amber-400 bg-amber-400/20 px-3.5 py-1.5 text-xs font-black text-amber-900 shadow-sm md:text-sm">
             <span className="flex h-2.5 w-2.5 rounded-full bg-red-500 animate-ping"></span>
-            🔥 정부 보조금 최대 600만 원까지 지원! (100% 서류대행 컨설팅)
+            🔥 정부 보조금 최대 600만 원까지 지원! (100% 맞춤 지원 컨설팅)
           </div>
 
           <h1 className="mt-4 text-3xl font-black leading-tight tracking-tight text-slate-900 md:text-5xl">
@@ -57,12 +57,12 @@ export default function Hero({
 
           <p className="mt-4 text-base leading-relaxed text-slate-700 md:text-lg">
             <span className="font-extrabold text-slate-900">
-              "정부 지원금 챙겨받고 철거하세요! 복잡한 신청 서류, 李家(이가)가 100% 대행합니다!"
+              "정부 지원금 챙겨받고 철거하세요! 복잡한 신청 절차, 신흥건설이 100% 컨설팅합니다!"
             </span>
             <br />
             <span className="text-slate-600">
-              소상공인 점포철거 정부보조금 **최대 600만 원까지** 자격 조회부터 증빙 서류 뚝딱!
-              오얏나무의 묵직한 기술 가문 <strong className="text-slate-900 font-black">李家(이가) 컨설팅 & 직영 시공팀</strong>이 **전문 철거 ➔ HACCP ➔ 전기(승압) ➔ 방수/보수**까지 한 방에 끝내드립니다.
+              소상공인 점포철거 정부보조금 **최대 600만 원까지** 자격 조회부터 증빙 지원까지!
+              베테랑 기술 전문 <strong className="text-slate-900 font-black">신흥건설 컨설팅 & 직영 시공팀</strong>이 **전문 철거 ➔ HACCP ➔ 전기(승압) ➔ 방수/보수**까지 한 방에 끝내드립니다.
             </span>
           </p>
 
@@ -70,7 +70,7 @@ export default function Hero({
           <div className="mt-5 space-y-2 text-xs text-slate-800 md:text-sm">
             <div className="flex items-center gap-2">
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-red-100 text-red-600 font-black">💰</span>
-              <span><strong>정부 보조금 최대 600만 원까지 대상 0원 확인!</strong> (서류 대행 컨설팅)</span>
+              <span><strong>정부 보조금 최대 600만 원까지 대상 0원 확인!</strong> (지원 신청 컨설팅)</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-100 text-amber-700 font-black">🔨</span>
@@ -87,7 +87,7 @@ export default function Hero({
             <a
               href="/call"
               onClick={() => trackEvent("call_click")}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3.5 text-sm font-black text-white shadow-lg transition hover:bg-slate-800 active:scale-95"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-3.5 py-3.5 text-xs sm:text-sm font-black text-white shadow-lg transition hover:bg-slate-800 active:scale-95"
               aria-label="전화로 철거/보조금 견적 상담"
               title={tel ? `전화 상담 ${tel}` : "전화 상담"}
             >
@@ -95,37 +95,36 @@ export default function Hero({
               지금 당장 전화
             </a>
 
-            {/* 💰 보조금 & 견적문의 */}
+            {/* 💬 문자 상담 */}
+            <a
+              href="sms:0517143396?body=철거/보조금600만/HACCP/전기/보수 견적 문의드립니다."
+              onClick={() => trackEvent("sms_direct_click")}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-slate-900 bg-white px-3.5 py-3.5 text-xs sm:text-sm font-black text-slate-900 shadow-md transition hover:bg-slate-50 active:scale-95"
+              aria-label="문자 메시지로 빠른 상담"
+            >
+              <span aria-hidden>💬</span>
+              문자 상담
+            </a>
+
+            {/* 💰 보조금 자격조회 */}
             <a
               href={`#${leadAnchorId}`}
               onClick={() => trackEvent("sms_click")}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-4 py-3.5 text-sm font-black text-slate-900 shadow-lg transition hover:from-amber-400 hover:to-amber-500 active:scale-95 animate-bounce-short"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-3.5 py-3.5 text-xs sm:text-sm font-black text-slate-900 shadow-lg transition hover:from-amber-400 hover:to-amber-500 active:scale-95 animate-bounce-short"
               aria-label="보조금 및 견적 신청 폼으로 이동"
             >
               <span aria-hidden>💰</span>
               보조금 600만 자격조회
             </a>
-
-            {/* 💬 카톡 */}
-            <a
-              href={kakaoChatUrl}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => trackEvent("kakao_click")}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-slate-900 bg-white px-4 py-3.5 text-sm font-black text-slate-900 shadow-sm transition hover:bg-slate-50 active:scale-95"
-              aria-label="카톡으로 철거 및 공사 상담"
-            >
-              <span aria-hidden>💬</span>
-              카톡 1:1 상담
-            </a>
           </div>
 
           <p className="mt-4 text-xs font-semibold text-slate-500">
-            ※ **李家(이가)**는 정부 보조금(희망리턴패키지 등) 수혜를 돕는 **전문 대행 컨설팅 및 철거/시공 직영 업체**입니다. (무료 현장 방문)
+            ※ **신흥건설**은 정부 보조금(희망리턴패키지 등) 수혜를 돕는 **전문 지원 컨설팅 및 철거/시공 직영 업체**입니다. (무료 현장 방문)
           </p>
         </div>
 
         {/* Right - Hero Banner Container */}
+        <div className="relative">
           <div className="relative overflow-hidden rounded-3xl border-2 border-slate-900 bg-slate-950 p-6 text-white shadow-2xl">
             {/* Real Factory Background Overlay */}
             <div
@@ -138,9 +137,9 @@ export default function Hero({
             <div className="flex items-center justify-between border-b border-slate-700/80 pb-4">
               <div>
                 <span className="rounded-md bg-amber-500/25 px-2.5 py-1 text-xs font-black text-amber-400">
-                  李家 (오얏 리 · 집 가)
+                  신흥건설 (전문 철거 & 시공)
                 </span>
-                <h3 className="mt-2 text-2xl font-black text-white">李家 컨설팅 & 원스톱 시공</h3>
+                <h3 className="mt-2 text-2xl font-black text-white">신흥건설 원스톱 전문 컨설팅 & 시공</h3>
               </div>
               <span className="text-4xl">🏗️</span>
             </div>
@@ -152,7 +151,7 @@ export default function Hero({
                   <span className="text-xl text-amber-400 underline decoration-2">최대 600만 원까지</span>
                 </div>
                 <p className="mt-1.5 text-xs font-semibold text-slate-200">
-                  국가 지원 소상공인 철거 보조금! 서류작성부터 자격신청까지 100% 대행 컨설팅!
+                  국가 지원 소상공인 철거 보조금! 자격 조회부터 수혜 절차까지 100% 맞춤 컨설팅!
                 </p>
               </div>
 

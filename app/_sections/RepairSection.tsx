@@ -7,7 +7,7 @@ export default function RepairSection() {
     () => [
       {
         title: "한전 전기 승압 공사",
-        desc: "에어컨 틀면 차단기 툭 떨어지나요? 한전 서류 대행부터 계약전력 빵빵하게 증설 완료!",
+        desc: "에어컨 틀면 차단기 툭 떨어지나요? 한전 수속 지원부터 계약전력 빵빵하게 증설 완료!",
         badge: "승압 해결사",
       },
       {
@@ -28,7 +28,7 @@ export default function RepairSection() {
     () => [
       {
         title: "옥상 & 외벽 방수 공사",
-        desc: "장마철에 물 세서 대야 받아놓으셨죠? 李家 우레탄 4중 방수로 물 한 방울 안 샙니다!",
+        desc: "장마철에 물 세서 대야 받아놓으셨죠? 신흥건설 우레탄 4중 방수로 물 한 방울 안 샙니다!",
         badge: "철통 4중 방수",
       },
       {
@@ -51,10 +51,10 @@ export default function RepairSection() {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <span className="rounded-full bg-blue-900 px-3.5 py-1 text-xs font-black text-blue-300">
-              ⚡ 李家(이가) 전기 & 방수 보수
+              ⚡ 신흥건설 전기 & 방수 보수
             </span>
             <h3 className="mt-2 text-xl font-black text-slate-900 md:text-3xl">
-              "차단기 픽픽 떨어지고 옥상 비 샐 땐? 땜빵 공사 말고 李家!"
+              "차단기 픽픽 떨어지고 옥상 비 샐 땐? 땜빵 공사 말고 신흥건설!"
             </h3>
             <p className="mt-1 text-xs text-slate-600 md:text-sm">
               전기 승압·동력배선부터 옥상/외벽 방수, 균열 보수, 시설 리모델링까지 안전 베테랑 직영팀 직접 시공!

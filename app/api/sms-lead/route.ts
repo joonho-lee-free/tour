@@ -312,7 +312,7 @@ export async function POST(req: Request) {
      * - 공개용 마스킹(maskPhone)은 Firestore public_leads 쪽에서만 유지
      */
     const text =
-      `【李家(이가) 보조금600만/전문철거/HACCP/전기/보수 견적문의】\n` +
+      `【신흥건설 보조금600만/전문철거/HACCP/전기/보수 견적문의】\n` +
       `성함/상호: ${storeName}\n` +
       `연락처: ${formatPhoneFull(phoneDigits) || phone}\n` +
       `지역: ${regionSafe}\n` +

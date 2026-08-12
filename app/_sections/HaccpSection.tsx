@@ -35,10 +35,10 @@ export default function HaccpSection() {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <span className="rounded-full bg-emerald-900 px-3.5 py-1 text-xs font-black text-emerald-300">
-              🏭 李家(이가) HACCP 식품공장 시공
+              🏭 신흥건설 HACCP 식품공장 시공
             </span>
             <h3 className="mt-2 text-xl font-black text-slate-900 md:text-3xl">
-              "위생검사 탈락? 李家(이가) 시공에선 절대 없는 일!"
+              "위생검사 탈락? 신흥건설 시공에선 절대 없는 일!"
             </h3>
             <p className="mt-1 text-xs text-slate-600 md:text-sm">
               식품의약품안전처 HACCP 평가 통과 기준을 100% 충족하는 클린룸, 위생 판넬, 에폭시 전문 시공!

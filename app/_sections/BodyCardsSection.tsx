@@ -6,7 +6,6 @@ import SubsidyCalculator from "../_components/SubsidyCalculator";
 import BeforeAfterSection from "../_components/BeforeAfterSection";
 import HaccpSection from "./HaccpSection";
 import RepairSection from "./RepairSection";
-import PortfolioSection from "./PortfolioSection";
 import ProcessSection from "./ProcessSection";
 import WhySection from "./WhySection";
 
@@ -18,7 +17,6 @@ export default function BodyCardsSection() {
       { key: "beforeafter", node: <BeforeAfterSection /> },
       { key: "haccp", node: <HaccpSection /> },
       { key: "repair", node: <RepairSection /> },
-      { key: "portfolio", node: <PortfolioSection /> },
       { key: "process", node: <ProcessSection /> },
       { key: "why", node: <WhySection /> },
     ],

@@ -5,7 +5,7 @@ export default function PrivacyPage() {
 
       <section className="space-y-6 text-sm leading-relaxed">
         <p>
-          이가에프엔비(이하 “회사”)는 「개인정보 보호법」을 준수하며,
+          신흥건설(이하 “회사”)는 「개인정보 보호법」을 준수하며,
           고객의 개인정보를 중요하게 생각하고 보호하기 위해
           다음과 같은 개인정보처리방침을 수립·공개합니다.
         </p>
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
 
         <h2 className="text-lg font-semibold">6. 개인정보 보호책임자</h2>
         <p>
-          개인정보 보호책임자: 이가에프엔비<br />
+          개인정보 보호책임자: 신흥건설<br />
           문의: 홈페이지 문의 또는 고객센터
         </p>
 

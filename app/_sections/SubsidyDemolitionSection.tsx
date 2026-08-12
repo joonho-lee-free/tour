@@ -18,14 +18,14 @@ export default function SubsidyDemolitionSection() {
         icon: "🏗️",
       },
       {
-        title: "서류 복잡하지 않나요?",
-        desc: "전혀요! 李家(이가)에서 시공 전후 사진부터 신청 증빙 서류까지 100% 무료 작성 대행!",
-        badge: "서류 100% 무료 대행",
+        title: "신청 복잡하지 않나요?",
+        desc: "전혀요! 신흥건설에서 시공 전후 사진부터 신청 절차 가이드까지 100% 맞춤 지원 컨설팅!",
+        badge: "100% 맞춤 지원 컨설팅",
         icon: "✍️",
       },
       {
         title: "돈은 언제 나오나요?",
-        desc: "안전 철거 완료 보고서 제출 후 실질적인 보조금 통장 입금까지 李家가 1:1 끝까지 밀착 케어!",
+        desc: "안전 철거 완료 보고서 제출 후 실질적인 보조금 통장 입금까지 신흥건설이 1:1 끝까지 밀착 케어!",
         badge: "속도전 1:1 케어",
         icon: "⚡",
       },
@@ -68,7 +68,7 @@ export default function SubsidyDemolitionSection() {
             <div className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-1.5 text-xs font-black text-amber-400 shadow">
               <span>🏛️ 국가 지원 정책 사업</span>
               <span className="h-1.5 w-1.5 rounded-full bg-amber-400"></span>
-              <span>李家(이가) 서류 대행 컨설팅</span>
+              <span>신흥건설 맞춤 지원 컨설팅</span>
             </div>
             
             <h2 className="text-2xl font-black tracking-tight text-slate-900 md:text-4xl leading-tight">
@@ -78,7 +78,7 @@ export default function SubsidyDemolitionSection() {
             
             <p className="text-sm leading-relaxed text-slate-700 md:text-base">
               폐업이나 이전 점포 철거 시 국가에서 지원하는 소상공인 정책 지원금(희망리턴패키지 등)! <br />
-              <strong className="text-slate-900 font-black">李家(이가)</strong>가 600만 원 보조금 신청 서류 작성부터 증빙 제출, 전문 철거 시공까지 100% 대행해 드립니다.
+              <strong className="text-slate-900 font-black">신흥건설</strong>이 600만 원 보조금 자격 조회부터 증빙 지원, 전문 철거 시공까지 100% 컨설팅해 드립니다.
             </p>
           </div>
 
@@ -98,11 +98,11 @@ export default function SubsidyDemolitionSection() {
 
         {/* Q&A 안내 박스 */}
         <div className="mt-6 rounded-2xl border border-amber-400/60 bg-amber-500/10 p-4 text-xs text-slate-800">
-          <span className="font-black text-slate-950">💡 자주 묻는 질문: "이가에서 보조금을 직접 주는 건가요?"</span>
+          <span className="font-black text-slate-950">💡 자주 묻는 질문: "신흥건설에서 보조금을 직접 주는 건가요?"</span>
           <p className="mt-1 text-slate-700 leading-relaxed">
             <strong>아닙니다!</strong> 본 지원금은 소상공인 시장진흥공단 등 국가 기관에서 지급하는 **정부 정책 보조금**입니다. 
-            <strong className="text-slate-950"> 李家(이가)</strong>는 사장님이 지원금을 100% 챙겨받으실 수 있도록 
-            <strong> 자격 조회, 서류 작성, 공사 사진 증빙, 신청 절차를 무료 대행해 드리는 전문 컨설팅 & 철거 시공업체</strong>입니다.
+            <strong className="text-slate-950"> 신흥건설</strong>은 사장님이 지원금을 100% 챙겨받으실 수 있도록 
+            <strong> 자격 조회, 사진 증빙 가이드, 신청 절차를 안내해 드리는 전문 컨설팅 & 철거 시공업체</strong>입니다.
           </p>
         </div>
 
@@ -131,7 +131,7 @@ export default function SubsidyDemolitionSection() {
         <div className="flex items-center justify-between">
           <div>
             <span className="rounded-full bg-slate-900 px-3 py-1 text-xs font-black text-amber-400">
-              🔨 李家(이가) 대표 철거 시공
+              🔨 신흥건설 대표 철거 시공
             </span>
             <h3 className="mt-2 text-xl font-black text-slate-900 md:text-3xl">
               소음·민원 제로 도전! 완벽 원상복구 철거

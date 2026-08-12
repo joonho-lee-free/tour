@@ -6,8 +6,8 @@ export const metadata = {
 
 const strengths = [
   {
-    title: "정부 보조금 600만 원 지원 대행",
-    desc: "희망리턴패키지 등 소상공인 점포철거 정부 지원금 자격 무료 조회 및 증빙 서류 작성부터 신청까지 100% 케어해 드립니다.",
+    title: "정부 보조금 600만 원 지원 컨설팅",
+    desc: "희망리턴패키지 등 소상공인 점포철거 정부 지원금 자격 무료 조회 및 증빙 가이드부터 수혜까지 100% 케어해 드립니다.",
   },
   {
     title: "하도급 없는 직영 시공팀",
@@ -25,7 +25,7 @@ const strengths = [
 
 const services = [
   "전문 철거 & 점포 원상복구 공사",
-  "소상공인 철거 정부보조금(최대 600만) 대행",
+  "소상공인 철거 정부보조금(최대 600만) 컨설팅",
   "HACCP 인증 식품공장 & 클린룸 시공",
   "위생 판넬, 에폭시 바닥, 에어샤워 설치",
   "한전 전기 승압 공사 & 동력배선 시공",
@@ -90,8 +90,8 @@ export default function CompanyPage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-slate-300 md:text-lg">
-              <strong className="font-black text-amber-400">李家(이가) / 이가에프엔비</strong>는 상가·사무실·공장 전문 철거와 점포 원상복구시
-              <span className="font-bold text-amber-400"> 국가에서 제공하는 소상공인 정부 보조금(최대 600만 원까지)</span> 자격 조회부터 서류 작성, 사진 증빙 및 절차를 100% 지원하는 <strong className="text-white">전문 대행 컨설팅 & 직영 철거·시공 기업</strong>입니다.
+              <strong className="font-black text-amber-400">신흥건설</strong>은 상가·사무실·공장 전문 철거와 점포 원상복구시
+              <span className="font-bold text-amber-400"> 국가에서 제공하는 소상공인 정부 보조금(최대 600만 원까지)</span> 자격 조회부터 수혜 절차까지 100% 지원하는 <strong className="text-white">전문 지원 컨설팅 & 직영 철거·시공 기업</strong>입니다.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -129,7 +129,7 @@ export default function CompanyPage() {
               철거와 원상복구는 단순 부수는 작업이 아닌, **건물 구조 안전**과 **임대인 검수 완벽 승인**, 그리고 **정부 지원금 최대 활용**이 결합되어야 비로소 성공적입니다.
             </p>
             <p>
-              당사는 철거비 부담을 덜어드리는 **소상공인 정부보조금(최대 600만 원)** 지원 서류 대행부터, 식품공장 HACCP 인증 판넬/바닥 시공, 전기 승압 및 동력 배선, 옥상/외벽 방수 보수까지 통합 직영 인력으로 해결합니다.
+              당사는 철거비 부담을 덜어드리는 **소상공인 정부보조금(최대 600만 원)** 지원 컨설팅부터, 식품공장 HACCP 인증 판넬/바닥 시공, 전기 승압 및 동력 배선, 옥상/외벽 방수 보수까지 통합 직영 인력으로 해결합니다.
             </p>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function CompanyPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/company-bg.jpg"
-                alt="이가에프엔비 본사 및 HACCP 식품공장 시설 전경"
+                alt="신흥건설 본사 및 HACCP 식품공장 시설 전경"
                 className="h-full w-full object-cover transition duration-700 hover:scale-105"
               />
               <div className="absolute top-4 left-4 rounded-full bg-emerald-600 px-3.5 py-1 text-xs font-black text-white shadow">
@@ -154,15 +154,15 @@ export default function CompanyPage() {
                 🏢 본사 및 전용 시공 센터 전경
               </span>
               <h3 className="mt-3 text-2xl font-black text-white">
-                부산 강서구 이가에프엔비 직영 센터
+                김해 신흥건설 직영 센터
               </h3>
               <p className="mt-3 text-xs leading-relaxed text-slate-300 md:text-sm">
-                부산시 강서구 낙동북로 31번길 19에 위치한 이가에프엔비 본사 전경입니다.
+                경남 김해시 금관대로 119번길 21-13에 위치한 신흥건설 본사 전경입니다.
                 자체 철거 장비 및 HACCP 판넬/전기 자재를 직영 관리하여 거품 없는 공사 단가와 최상의 품질을 보장합니다.
               </p>
 
               <div className="mt-6 flex items-center gap-2 text-xs font-bold text-amber-400 border-t border-slate-800 pt-4">
-                <span>📍 주소: 부산시 강서구 낙동북로 31번길 19 이가에프엔비</span>
+                <span>📍 주소: 경남 김해시 금관대로 119번길 21-13 신흥건설</span>
               </div>
             </div>
           </div>
@@ -246,12 +246,12 @@ export default function CompanyPage() {
           </h2>
 
           <div className="mt-6 grid gap-4 text-xs leading-relaxed text-slate-700 md:grid-cols-2">
-            <div><span className="font-bold text-slate-900">상호명</span> : 이가에프엔비</div>
-            <div><span className="font-bold text-slate-900">대표자</span> : 이준호</div>
-            <div><span className="font-bold text-slate-900">사무실 주소</span> : 부산시 강서구 낙동북로 31번길 19 이가에프엔비</div>
-            <div><span className="font-bold text-slate-900">사업자등록번호</span> : 408-30-91599</div>
+            <div><span className="font-bold text-slate-900">상호명</span> : 신흥건설</div>
+            <div><span className="font-bold text-slate-900">대표자</span> : 이승복</div>
+            <div><span className="font-bold text-slate-900">사무실 주소</span> : 경남 김해시 금관대로 119번길 21-13</div>
+            <div><span className="font-bold text-slate-900">사업자등록번호</span> : 501-26-30652</div>
             <div><span className="font-bold text-slate-900">전화번호</span> : 051-714-3396</div>
-            <div><span className="font-bold text-slate-900">입금 계좌</span> : 기업은행 256-117020-01-012 (예금주: 이준호(이가에프엔비))</div>
+            <div><span className="font-bold text-slate-900">입금 계좌</span> : 기업은행 01087932304 (예금주: 신흥건설)</div>
           </div>
         </div>
       </section>

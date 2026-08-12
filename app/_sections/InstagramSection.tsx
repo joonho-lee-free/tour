@@ -26,11 +26,11 @@ export default function InstagramSection() {
               <span aria-hidden>📷</span>
               <span>Instagram</span>
             </div>
-            <h2 className="mt-3 text-lg font-bold md:text-xl">
-              인스타 당첨자 여행후기
+            <h2 className="mt-3 text-lg font-bold md:text-xl text-slate-900">
+              📸 신흥건설 생생 현장 인스타그램
             </h2>
-            <p className="mt-1 text-sm text-gray-600">
-              사진을 보내주시는 고객께 추첨하여 선물을 드립니다.
+            <p className="mt-1 text-sm text-slate-600">
+              전문 철거, HACCP 인증 공사, 한전 승압 전기, 방수 보수 시공 생생 현장
             </p>
           </div>
         </div>
@@ -39,12 +39,13 @@ export default function InstagramSection() {
 
         <div className="mt-4">
           <a
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/shcom4553"
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-semibold text-gray-800 underline underline-offset-4"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-800 underline underline-offset-4 hover:text-amber-600 transition"
           >
-            인스타그램에서 더보기
+            <span>@shcom4553 인스타그램에서 더보기</span>
+            <span>➔</span>
           </a>
         </div>
       </div>

@@ -9,7 +9,7 @@ export default function TopAnnouncementBar() {
             HOT
           </span>
           <span className="truncate text-amber-300">
-            🔥 2026 소상공인 점포철거 정부보조금 지원 (평당 20만원 / 최대 600만원까지 서류대행)
+            🔥 2026 소상공인 점포철거 정부보조금 지원 (평당 20만원 / 최대 600만원까지 지원 컨설팅)
           </span>
         </div>
 

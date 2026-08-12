@@ -17,14 +17,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://haccp4553.vercel.app"),
   title: {
-    default: "李家(이가) 전문 철거공사 · 정부보조금 최대 600만원 | HACCP공사 & 전기/시설보수",
-    template: "%s | 李家 전문철거 · HACCP · 전기/시설보수",
+    default: "신흥건설 전문 철거공사 · 정부보조금 최대 600만원 | HACCP공사 & 전기/시설보수",
+    template: "%s | 신흥건설 전문철거 · HACCP · 전기/시설보수",
   },
   description:
-    "李家(이가) 상가·사무실·공장 전문 철거 및 원상복구시 소상공인 정부 보조금 최대 600만원 지원 신청 대행! HACCP 인증 공사, 전기공사(승압/배선/동력), 시설 보수 리모델링 전문",
+    "신흥건설 상가·사무실·공장 전문 철거 및 원상복구시 소상공인 정부 보조금 최대 600만원 지원 컨설팅! HACCP 인증 공사, 전기공사(승압/배선/동력), 시설 보수 리모델링 전문",
   keywords: [
-    "李家",
-    "이가철거",
+    "신흥건설",
+    "신흥건설 철거",
     "전문 철거",
     "철거 공사",
     "상가 철거",
@@ -48,11 +48,11 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "李家(이가) 전문 철거공사 · 정부보조금 최대 600만원 | HACCP공사 & 전기/시설보수",
+    title: "신흥건설 전문 철거공사 · 정부보조금 최대 600만원 | HACCP공사 & 전기/시설보수",
     description:
-      "李家(이가) 전문 철거 및 점포 원상복구 소상공인 정부보조금 최대 600만원 지원! HACCP공사, 전기공사, 시설 보수 리모델링 무료 방문견적",
+      "신흥건설 전문 철거 및 점포 원상복구 소상공인 정부보조금 최대 600만원 지원! HACCP공사, 전기공사, 시설 보수 리모델링 무료 방문견적",
     url: "/",
-    siteName: "李家(이가) 전문 철거 & HACCP · 전기/시설보수 센터",
+    siteName: "신흥건설 전문 철거 & HACCP · 전기/시설보수 센터",
     locale: "ko_KR",
     type: "website",
     images: [
