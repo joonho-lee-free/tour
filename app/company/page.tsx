@@ -85,7 +85,7 @@ export default function CompanyPage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-slate-300 md:text-lg">
-              <strong className="font-black text-amber-400">신흥건설</strong>은 상가·사무실·공장 전문 철거와 점포 원상복구시
+              <strong className="font-black text-amber-400">李家(이가)</strong>는 상가·사무실·공장 전문 철거와 점포 원상복구시
               <span className="font-bold text-amber-400"> 국가에서 제공하는 소상공인 정부 보조금(최대 600만 원까지)</span> 자격 조회부터 수혜 절차까지 100% 지원하는 <strong className="text-white">전문 지원 컨설팅 & 직영 철거·시공 기업</strong>입니다.
             </p>
 
@@ -207,12 +207,12 @@ export default function CompanyPage() {
           </h2>
 
           <div className="mt-6 grid gap-4 text-xs leading-relaxed text-slate-700 md:grid-cols-2">
-            <div><span className="font-bold text-slate-900">상호명</span> : 신흥건설</div>
-            <div><span className="font-bold text-slate-900">대표자</span> : 이승복</div>
-            <div><span className="font-bold text-slate-900">사무실 주소</span> : 경남 김해시 금관대로 119번길 21-13</div>
-            <div><span className="font-bold text-slate-900">사업자등록번호</span> : 501-26-30652</div>
+            <div><span className="font-bold text-slate-900">상호명</span> : 李家 (이가)</div>
+            <div><span className="font-bold text-slate-900">대표자</span> : 이준호</div>
+            <div><span className="font-bold text-slate-900">사무실 주소</span> : 부산시 강서구 낙동북로 31번길 19</div>
+            <div><span className="font-bold text-slate-900">사업자등록번호</span> : 408-30-91599</div>
             <div><span className="font-bold text-slate-900">전화번호</span> : 051-714-3396</div>
-            <div><span className="font-bold text-slate-900">입금 계좌</span> : 기업은행 01087932304 (예금주: 신흥건설)</div>
+            <div><span className="font-bold text-slate-900">입금 계좌</span> : 기업은행 256-117020-01-012 (예금주: 이준호(李家))</div>
           </div>
         </div>
       </section>

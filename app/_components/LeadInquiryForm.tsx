@@ -17,10 +17,10 @@ export default function LeadInquiryForm({ sent, error }: FormProps) {
               <span>0원 찔러보기 환영</span>
             </div>
             <h2 className="mt-3 text-xl font-black text-white md:text-3xl">
-              정부 보조금 최대 600만 원까지! 신흥건설 자격 조회 & 무료 방문견적
+              정부 보조금 최대 600만 원까지! 李家(이가) 자격 조회 & 무료 방문견적
             </h2>
             <p className="mt-1 text-xs text-slate-300 md:text-sm">
-              접수 즉시 신흥건설 보조금 전문 컨설팅팀 & 직영 기술자가 확인 후 신속하게 연락드립니다.
+              접수 즉시 李家(이가) 보조금 전문 컨설팅팀 & 직영 기술자가 확인 후 신속하게 연락드립니다.
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export default function LeadInquiryForm({ sent, error }: FormProps) {
 
         {sent && (
           <div className="mb-6 rounded-2xl border-2 border-emerald-400/40 bg-emerald-500/20 px-5 py-4 text-sm font-black text-emerald-300">
-            ✅ 접수가 완료되었습니다! 신흥건설 담당자가 빛의 속도로 확인 후 연락드리겠습니다. 🙂
+            ✅ 접수가 완료되었습니다! 李家(이가) 담당자가 빛의 속도로 확인 후 연락드리겠습니다. 🙂
           </div>
         )}
 
@@ -84,7 +84,7 @@ export default function LeadInquiryForm({ sent, error }: FormProps) {
                 <option value="HACCP공사 문의">🏭 HACCP 식품공장 & 클린룸 시공</option>
                 <option value="전기공사 문의">⚡ 전기공사 (한전 승압 / 동력전기 / 배선)</option>
                 <option value="시설보수 및 리모델링 문의">🛠️ 옥상·외벽 철통 방수 / 균열 보수 / 리모델링</option>
-                <option value="종합 공사 문의">🏗️ 신흥건설 종합 철거 & 시공 문의</option>
+                <option value="종합 공사 문의">🏗️ 李家(이가) 종합 철거 & 시공 문의</option>
               </select>
             </div>
           </div>

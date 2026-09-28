@@ -27,7 +27,7 @@ export default function InstagramSection() {
               <span>Instagram</span>
             </div>
             <h2 className="mt-3 text-lg font-bold md:text-xl text-slate-900">
-              📸 신흥건설 생생 현장 인스타그램
+              📸 李家(이가) 생생 현장 인스타그램
             </h2>
             <p className="mt-1 text-sm text-slate-600">
               전문 철거, HACCP 인증 공사, 한전 승압 전기, 방수 보수 시공 생생 현장

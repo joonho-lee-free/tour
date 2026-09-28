@@ -57,12 +57,12 @@ export default function Hero({
 
           <p className="mt-4 text-base leading-relaxed text-slate-700 md:text-lg">
             <span className="font-extrabold text-slate-900">
-              "정부 지원금 챙겨받고 철거하세요! 복잡한 신청 절차, 신흥건설이 100% 컨설팅합니다!"
+              "정부 지원금 챙겨받고 철거하세요! 복잡한 신청 절차, 李家(이가)가 100% 컨설팅합니다!"
             </span>
             <br />
             <span className="text-slate-600">
               소상공인 점포철거 정부보조금 **최대 600만 원까지** 자격 조회부터 증빙 지원까지!
-              베테랑 기술 전문 <strong className="text-slate-900 font-black">신흥건설 컨설팅 & 직영 시공팀</strong>이 **전문 철거 ➔ HACCP ➔ 전기(승압) ➔ 방수/보수**까지 한 방에 끝내드립니다.
+              베테랑 기술 전문 <strong className="text-slate-900 font-black">李家(이가) 컨설팅 & 직영 시공팀</strong>이 **전문 철거 ➔ HACCP ➔ 전기(승압) ➔ 방수/보수**까지 한 방에 끝내드립니다.
             </span>
           </p>
 
@@ -119,7 +119,7 @@ export default function Hero({
           </div>
 
           <p className="mt-4 text-xs font-semibold text-slate-500">
-            ※ **신흥건설**은 정부 보조금(희망리턴패키지 등) 수혜를 돕는 **전문 지원 컨설팅 및 철거/시공 직영 업체**입니다. (무료 현장 방문)
+            ※ **李家(이가)**는 정부 보조금(희망리턴패키지 등) 수혜를 돕는 **전문 지원 컨설팅 및 철거/시공 직영 업체**입니다. (무료 현장 방문)
           </p>
         </div>
 
@@ -131,9 +131,9 @@ export default function Hero({
             <div className="flex items-center justify-between border-b border-slate-700/80 pb-4">
               <div>
                 <span className="rounded-md bg-amber-500/25 px-2.5 py-1 text-xs font-black text-amber-400">
-                  신흥건설 (전문 철거 & 시공)
+                  李家 (전문 철거 & 시공)
                 </span>
-                <h3 className="mt-2 text-2xl font-black text-white">신흥건설 원스톱 전문 컨설팅 & 시공</h3>
+                <h3 className="mt-2 text-2xl font-black text-white">李家(이가) 원스톱 전문 컨설팅 & 시공</h3>
               </div>
               <span className="text-4xl">🏗️</span>
             </div>

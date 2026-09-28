@@ -103,7 +103,7 @@ export default function SubsidyCalculator() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-amber-400 font-bold">3.</span>
-                  <span>자격 검수부터 증빙 가이드는 <strong>신흥건설에서 100% 맞춤 컨설팅!</strong></span>
+                  <span>자격 검수부터 증빙 가이드는 <strong>李家(이가)에서 100% 맞춤 컨설팅!</strong></span>
                 </li>
               </ul>
             </div>
