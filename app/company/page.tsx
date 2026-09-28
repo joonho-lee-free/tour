@@ -212,7 +212,7 @@ export default function CompanyPage() {
             <div><span className="font-bold text-slate-900">사무실 주소</span> : 부산시 강서구 낙동북로 31번길 19</div>
             <div><span className="font-bold text-slate-900">사업자등록번호</span> : 408-30-91599</div>
             <div><span className="font-bold text-slate-900">전화번호</span> : 051-714-3396</div>
-            <div><span className="font-bold text-slate-900">입금 계좌</span> : 기업은행 256-117020-01-012 (예금주: 이준호(李家))</div>
+            <div><span className="font-bold text-slate-900">입금 계좌</span> : 기업은행 256-117020-01-012 (예금주: 이준호(이가f&b))</div>
           </div>
         </div>
       </section>

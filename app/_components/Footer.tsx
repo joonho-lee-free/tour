@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="mt-4 rounded-xl bg-slate-950 p-3 text-[11px] text-slate-400">
               <div className="font-bold text-amber-400">입금 계좌 안내</div>
               <div className="mt-1 text-slate-200 font-bold">기업은행 256-117020-01-012</div>
-              <div>예금주: 이준호(李家)</div>
+              <div>예금주: 이준호(이가f&b)</div>
             </div>
 
             <div className="mt-4 text-[11px] text-slate-500">
