@@ -131,39 +131,40 @@ export default function LiveLeadsRolling() {
   const activeItem = leads[currentIndex] || leads[0];
 
   return (
-    <section className="border-b border-gray-100 bg-white py-3 px-4 sm:px-6">
-      <div className="mx-auto max-w-4xl">
-        {/* 상단 텍스트 롤링 배너 (시간 표시 전면 삭제) */}
-        <div className="flex items-center gap-2.5 overflow-hidden rounded-xl bg-gray-50/80 px-3.5 py-2.5 shadow-xs border border-gray-200">
+    <div className="w-full bg-slate-950 px-3 py-2 text-white border-b border-amber-500/30">
+      <div className="mx-auto flex max-w-5xl items-center justify-between text-xs font-bold gap-3">
+        {/* 좌측: 실시간 접수 롤링 뱃지 + 내용 */}
+        <div className="flex items-center gap-2 overflow-hidden min-w-0 flex-1">
           <div className="flex items-center gap-1.5 flex-shrink-0">
-            <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
-            <span className="text-[11px] sm:text-xs font-black text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">
+            <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
+            <span className="text-[10px] sm:text-xs font-black text-emerald-300 bg-emerald-950/90 border border-emerald-500/50 px-2 py-0.5 rounded-md whitespace-nowrap">
               실시간 접수
             </span>
           </div>
 
           {/* 롤링되는 단일 텍스트 (시간 없이 깔끔하게 접수 내용만 노출) */}
-          <div className="flex-1 overflow-hidden min-w-0">
+          <div className="overflow-hidden min-w-0 flex-1">
             <div
               key={activeItem.id}
-              className="flex items-center gap-1.5 text-xs sm:text-sm text-gray-800 truncate animate-fade-in"
+              className="flex items-center gap-1.5 text-xs sm:text-sm truncate animate-fade-in"
             >
-              <strong className="text-gray-900 font-bold truncate">
+              <strong className="text-white font-bold truncate">
                 {activeItem.location} {activeItem.store}
               </strong>
-              <span className="text-gray-400">·</span>
-              <span className="text-amber-700 font-semibold truncate">
+              <span className="text-slate-500">·</span>
+              <span className="text-amber-400 font-semibold truncate">
                 {activeItem.status}
               </span>
             </div>
           </div>
         </div>
 
-        {/* 신뢰 강조 문구 */}
-        <p className="mt-1.5 text-center text-[11px] text-gray-600 font-medium">
-          🔥 지금도 부울경 사장님들이 실시간으로 지원금 혜택을 챙겨받고 계십니다.
-        </p>
+        {/* 우측 보조 문구 (051-714-3396 및 조회하기 버튼은 제외) */}
+        <div className="hidden md:flex items-center gap-1.5 text-[11px] text-slate-400 flex-shrink-0">
+          <span>🔥</span>
+          <span className="text-slate-300 font-medium">부울경 전지역 출장 방문 실측</span>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
