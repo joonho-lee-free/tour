@@ -61,19 +61,31 @@ const DEFAULT_REALTIME_LEADS: LeadItem[] = [
     store: "OO당구장",
     status: "무료 현장 실측 신청",
   },
+  {
+    id: "lead-9",
+    location: "울산 남구",
+    store: "OO사무실",
+    status: "원상복구 및 폐업 지원금 접수",
+  },
+  {
+    id: "lead-10",
+    location: "부산 동래구",
+    store: "OO피트니스",
+    status: "지원금 자격 조회 및 실측 예약",
+  },
 ];
 
 export default function LiveLeadsRolling() {
   const [leads, setLeads] = useState<LeadItem[]>(DEFAULT_REALTIME_LEADS);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Firestore 실시간 데이터 연동 (부울경 실제 접수건만 안전하게 필터링)
+  // Firestore 실시간 데이터 연동 (부울경 실제 접수건만 안전하게 필터링하여 최신순 10건 조회)
   useEffect(() => {
     try {
       const q = query(
         collection(db, "tour_public"),
         orderBy("createdAt", "desc"),
-        limit(8)
+        limit(10)
       );
 
       const unsub = onSnapshot(
@@ -104,7 +116,7 @@ export default function LiveLeadsRolling() {
             });
 
             if (firestoreItems.length > 0) {
-              setLeads([...firestoreItems, ...DEFAULT_REALTIME_LEADS].slice(0, 8));
+              setLeads([...firestoreItems, ...DEFAULT_REALTIME_LEADS].slice(0, 10));
             }
           }
         },
