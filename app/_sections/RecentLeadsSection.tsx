@@ -3,27 +3,23 @@
 import RecentLeads from "../_components/RecentLeads";
 
 export default function RecentLeadsSection() {
-  // ✅ 섹션에서 정책(강조색 팔레트)을 결정 → 컴포넌트로 전달
   const highlightStyles = [
-    { bg: "bg-indigo-50/70", border: "border-indigo-500" },
-    { bg: "bg-sky-50/70", border: "border-sky-500" },
-    { bg: "bg-emerald-50/70", border: "border-emerald-500" },
-    { bg: "bg-amber-50/70", border: "border-amber-500" },
-    { bg: "bg-rose-50/70", border: "border-rose-500" },
+    { bg: "bg-indigo-50/80", border: "border-indigo-500" },
+    { bg: "bg-sky-50/80", border: "border-sky-500" },
+    { bg: "bg-emerald-50/80", border: "border-emerald-500" },
+    { bg: "bg-amber-50/80", border: "border-amber-500" },
+    { bg: "bg-rose-50/80", border: "border-rose-500" },
   ] as const;
 
   return (
-    <section className="mx-auto w-full max-w-6xl px-2 pb-12 sm:px-4 md:px-8">
-      {/* ✅ RecentLeads(내부 표 카드) 폭/폰트 모바일 최적화: 로직은 그대로 */}
+    <section className="w-full bg-white py-8 sm:py-12 border-b border-gray-100">
+      {/* RecentLeads(내부 표 카드) 모바일 가로 비율 최적화 */}
       <style jsx global>{`
         .ss-recent-leads > * {
           width: 100% !important;
           max-width: none !important;
           margin-left: 0 !important;
           margin-right: 0 !important;
-        }
-        .ss-recent-leads *[class*="max-w"] {
-          max-width: none !important;
         }
         .ss-recent-leads table {
           width: 100% !important;
@@ -39,64 +35,70 @@ export default function RecentLeadsSection() {
         @media (max-width: 640px) {
           .ss-recent-leads table th,
           .ss-recent-leads table td {
-            font-size: 10px !important;
-            line-height: 1.25 !important;
-            padding: 8px 6px !important;
+            font-size: 11px !important;
+            line-height: 1.35 !important;
+            padding: 8px 4px !important;
           }
           .ss-recent-leads th:nth-child(1),
           .ss-recent-leads td:nth-child(1) {
-            width: 14%;
+            width: 15%;
           }
           .ss-recent-leads th:nth-child(2),
           .ss-recent-leads td:nth-child(2) {
-            width: 26%;
+            width: 25%;
             word-break: break-all;
           }
           .ss-recent-leads th:nth-child(3),
           .ss-recent-leads td:nth-child(3) {
-            width: 14%;
+            width: 20%;
           }
           .ss-recent-leads th:nth-child(4),
           .ss-recent-leads td:nth-child(4) {
-            width: 28%;
+            width: 25%;
           }
           .ss-recent-leads th:nth-child(5),
           .ss-recent-leads td:nth-child(5) {
-            width: 18%;
+            width: 15%;
             white-space: nowrap;
             text-align: right;
           }
         }
       `}</style>
 
-      <div className="group rounded-2xl border border-indigo-100 bg-indigo-50/40 p-4 ring-1 ring-indigo-100 transition-all duration-200 ease-out hover:-translate-y-1 hover:border-indigo-200 hover:bg-indigo-50/60 hover:shadow-lg hover:shadow-indigo-100/50 hover:ring-indigo-200 sm:p-5 md:p-8">
-        {/* 헤더 */}
-        <div className="mb-4 flex items-center justify-between">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-3 py-1 text-xs font-semibold text-indigo-800">
-              <span aria-hidden>🟢</span>
-              <span>실시간 접수</span>
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="rounded-2xl sm:rounded-3xl border border-gray-200 bg-gray-50/50 p-4 sm:p-6 md:p-8 shadow-sm">
+          {/* 섹션 헤더 */}
+          <div className="mb-4 sm:mb-6 flex items-center justify-between">
+            <div>
+              <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-800">
+                <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
+                <span>실시간 접수 현황</span>
+              </div>
+              <h2 className="mt-2 text-xl sm:text-2xl font-black text-gray-900">
+                최근 문의 접수 내역 (최근 10건)
+              </h2>
+              <p className="mt-1 text-xs sm:text-sm text-gray-600">
+                부울경 점포 사장님들의 실제 지원금 조회 및 무료 현장 실측 접수 현황입니다.
+              </p>
             </div>
-            <h2 className="mt-3 text-lg font-bold md:text-xl">최근 문의 현황</h2>
-            <p className="mt-1 text-sm text-gray-600">
-              실제 접수된 문의가 실시간으로 표시됩니다
-            </p>
+
+            <div
+              className="hidden sm:flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white shadow-sm text-xl"
+              aria-hidden
+            >
+              📋
+            </div>
           </div>
 
-          <div
-            className="flex h-10 w-10 items-center justify-center rounded-2xl bg-indigo-600 text-white shadow-sm transition-transform duration-200 group-hover:scale-105"
-            aria-hidden
-          >
-            📩
+          {/* RecentLeads 표 컴포넌트 */}
+          <div className="ss-recent-leads">
+            <RecentLeads highlightStyles={highlightStyles} />
           </div>
-        </div>
 
-        {/* ✅ RecentLeads 출력(로직 그대로) + 정책(강조색)만 섹션에서 내려줌 */}
-        <div className="ss-recent-leads">
-          <RecentLeads highlightStyles={highlightStyles} />
+          <p className="mt-3 text-center text-[11px] text-gray-400">
+            🔒 개인정보 보호를 위해 성명 및 전화번호 일부가 안전하게 마스킹 처리되어 노출됩니다.
+          </p>
         </div>
-
-        <div className="mt-5 h-1 w-full rounded-full bg-indigo-200" aria-hidden />
       </div>
     </section>
   );
