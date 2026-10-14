@@ -1,122 +1,87 @@
 // app/_components/Footer.tsx
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-900 text-slate-300">
-      <div className="mx-auto w-full max-w-6xl px-4 py-12 md:px-8">
-        <div className="grid gap-10 md:grid-cols-3">
+    <footer className="border-t border-slate-800 bg-slate-950 text-slate-400 text-xs pb-24 sm:pb-16">
+      <div className="mx-auto w-full max-w-4xl px-4 py-10 sm:py-12 md:px-8">
+        <div className="grid gap-8 sm:grid-cols-2">
           {/* 사업자 정보 */}
-          <div className="text-xs leading-relaxed text-slate-400">
-            <div className="text-base font-extrabold text-white">李家(이가) 전문 철거 & HACCP · 전기/시설보수 센터</div>
-            <div className="mt-1 font-bold text-amber-400">李家 (건축/철거/전기/보수 사업부)</div>
-            <div className="mt-3 space-y-1">
+          <div className="space-y-1.5 leading-relaxed">
+            <div className="text-sm font-extrabold text-white">
+              李家 (이가) · 부울경 상가·매장 전문 철거 & 정부지원금 센터
+            </div>
+            <div className="text-amber-400 font-bold">
+              소상공인시장진흥공단 점포철거비 지원사업 협력 시공사
+            </div>
+
+            <div className="pt-2 text-slate-400 space-y-1 text-[11px] sm:text-xs">
               <div>
-                <span className="font-semibold text-slate-200">상호명</span> : 李家 (이가)
+                <span className="font-semibold text-slate-300">상호명</span> : 李家 (이가)
               </div>
               <div>
-                <span className="font-semibold text-slate-200">대표자</span> : 이준호
+                <span className="font-semibold text-slate-300">대표자</span> : 이준호
               </div>
               <div>
-                <span className="font-semibold text-slate-200">사무실 주소</span> : 부산시 강서구 낙동북로 31번길 19
+                <span className="font-semibold text-slate-300">사업자등록번호</span> : 408-30-91599
               </div>
               <div>
-                <span className="font-semibold text-slate-200">사업자등록번호</span> : 408-30-91599
+                <span className="font-semibold text-slate-300">사업장 주소</span> : 부산시 강서구 낙동북로 31번길 19
               </div>
               <div>
-                <span className="font-semibold text-slate-200">전화번호</span> : 051-714-3396
+                <span className="font-semibold text-slate-300">직통 전화</span> : 010-6638-6576 / 051-714-3396
               </div>
             </div>
 
-            <div className="mt-4 rounded-xl bg-slate-950 p-3 text-[11px] text-slate-400">
-              <div className="font-bold text-amber-400">입금 계좌 안내</div>
-              <div className="mt-1 text-slate-200 font-bold">기업은행 256-117020-01-012</div>
-              <div>예금주: 이준호(이가f&b)</div>
+            <div className="mt-3 rounded-xl bg-slate-900 p-3 text-[11px] border border-slate-800">
+              <span className="text-amber-400 font-bold">공식 입금 계좌</span>: 기업은행 256-117020-01-012 (예금주: 이준호(이가f&b))
             </div>
 
-            <div className="mt-4 text-[11px] text-slate-500">
-              © 李家(이가). All rights reserved.
-            </div>
+            <p className="pt-2 text-[11px] text-slate-500">
+              © 李家 (이가). All rights reserved.
+            </p>
           </div>
 
-          {/* 고객센터 및 무료 방문 상담 */}
-          <div className="rounded-2xl border border-slate-700 bg-slate-800/80 p-6">
-            <div className="text-xs font-bold text-amber-400">무료 방문견적 & 보조금 상담 고객센터</div>
-            <div className="mt-2 text-2xl font-black tracking-tight text-white">
-              051-714-3396
-            </div>
-            <div className="mt-2 text-xs text-slate-300">
-              평일/주말: 08:00 ~ 21:00 (연중무휴 빠른 상담)
-              <br />
-              무료 현장 방문 견적 & 보조금 자격 조회
+          {/* 주요 안내 및 링크 */}
+          <div className="space-y-4 flex flex-col justify-between">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <div className="font-bold text-slate-200 text-xs sm:text-sm">
+                부울경 전지역 0원 무료 방문 실측
+              </div>
+              <p className="mt-1 text-[11px] text-slate-400 leading-relaxed">
+                부산 전지역, 김해, 창원, 마산, 양산 등 부울경 상가·매장 어디든 당일 또는 원하시는 일정에 무료 방문 실측을 진행해 드립니다.
+              </p>
+              <div className="mt-3 flex gap-2">
+                <a
+                  href="tel:01066386576"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-amber-400 hover:text-amber-300"
+                >
+                  <span>📞 010-6638-6576 직통 연결</span>
+                </a>
+              </div>
             </div>
 
-            <div className="mt-5 space-y-2">
+            <div className="flex flex-wrap items-center justify-between gap-3 pt-2 text-[11px] text-slate-400 border-t border-slate-800">
+              <div className="flex gap-4">
+                <a className="hover:text-amber-400" href="/company">
+                  회사소개
+                </a>
+                <a className="hover:text-amber-400" href="/privacy">
+                  개인정보처리방침
+                </a>
+                <a className="hover:text-amber-400" href="/terms">
+                  이용약관
+                </a>
+              </div>
+
               <a
-                href="tel:0517143396"
-                className="inline-flex w-full items-center justify-center rounded-xl bg-amber-500 px-4 py-3 text-xs font-black text-slate-900 shadow-md transition hover:bg-amber-400"
+                href="https://www.instagram.com/shcom4553"
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold text-pink-400 hover:text-pink-300"
               >
-                📞 즉시 전화 상담하기
-              </a>
-
-              <a
-                href="/#sms-lead"
-                className="inline-flex w-full items-center justify-center rounded-xl border border-slate-600 bg-slate-900 px-4 py-3 text-xs font-bold text-white transition hover:bg-slate-850"
-              >
-                💰 보조금 600만 & 견적 문의 폼
+                인스타그램 @shcom4553 ➔
               </a>
             </div>
           </div>
-
-          {/* 주요 제공 서비스 범위 */}
-          <div className="rounded-2xl border border-slate-700 bg-slate-800/40 p-6">
-            <div className="text-xs font-bold text-white">주요 사업 영역</div>
-            <ul className="mt-3 space-y-2 text-xs text-slate-300">
-              <li className="flex items-center gap-1.5">
-                <span className="text-amber-400 font-bold">🔨</span>
-                <span>전문 철거 & 정부 보조금 최대 600만원 지원</span>
-              </li>
-              <li className="flex items-center gap-1.5">
-                <span className="text-emerald-400 font-bold">🏭</span>
-                <span>HACCP 인증 식품공장 · 클린룸 · 위생판넬 시공</span>
-              </li>
-              <li className="flex items-center gap-1.5">
-                <span className="text-blue-400 font-bold">⚡</span>
-                <span>전기공사 (한전 승압 · 동력전기 · 배선/조명)</span>
-              </li>
-              <li className="flex items-center gap-1.5">
-                <span className="text-sky-400 font-bold">🛠️</span>
-                <span>시설 보수 (옥상/외벽 방수 · 크랙보수 · 리모델링)</span>
-              </li>
-            </ul>
-
-            <div className="mt-4 rounded-xl bg-slate-950 p-3 text-[11px] leading-relaxed text-slate-400">
-              * 전국 상가, 사무실, 공장, 식당 전문 무료 방문 견적을 약속드립니다.
-            </div>
-          </div>
-        </div>
-
-        {/* 하단 메뉴 */}
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-slate-800 pt-6 text-xs text-slate-400">
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <a className="hover:text-amber-400" href="/company">
-              회사소개
-            </a>
-            <a className="hover:text-amber-400" href="/privacy">
-              개인정보처리방침
-            </a>
-            <a className="hover:text-amber-400" href="/terms">
-              이용약관
-            </a>
-          </div>
-          
-          <a
-            href="https://www.instagram.com/shcom4553"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1.5 font-bold text-amber-400 hover:text-amber-300 transition"
-          >
-            <span>📷 공식 인스타그램 (@shcom4553)</span>
-            <span>➔</span>
-          </a>
         </div>
       </div>
     </footer>

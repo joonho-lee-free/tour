@@ -15,49 +15,34 @@ type Props = {
 
 const DEFAULT_POSTS = [
   {
-    title: "상가 전문 철거 & 완벽 원상복구",
-    tag: "🔨 전문 철거",
+    title: "부산 식당 주방 및 매장 완벽 원상복구",
+    tag: "🔨 식당 철거",
     img: "/images/company-bg.jpg",
   },
   {
-    title: "정부 보조금 최대 600만 자격 검수",
-    tag: "💰 보조금 600만",
+    title: "정부지원금 최대 600만 원 승인 완료",
+    tag: "💰 지원금 600만",
     img: "/images/fitforsection/fit-01.jpg",
   },
   {
-    title: "HACCP 식품공장 위생 판넬 시공",
-    tag: "🏭 HACCP 인증",
+    title: "창원 대형 카페 인테리어 철거 및 폐기물 수거",
+    tag: "☕ 카페 철거",
     img: "/images/fitforsection/fit-02.jpg",
   },
   {
-    title: "한전 승압 & 3상 동력 배선 공사",
-    tag: "⚡ 한전 승압",
+    title: "김해 학원 가벽·천장 텍스 원상복구 현장",
+    tag: "🏢 학원 철거",
     img: "/images/productsection/product-01.jpg",
   },
   {
-    title: "옥상 우레탄 4중 철통 방수 보수",
-    tag: "🛠️ 옥상 방수",
+    title: "소상공인시장진흥공단 증빙 서류 100% 무료 대행",
+    tag: "📄 서류 무료대행",
     img: "/images/productsection/product-02.jpg",
   },
   {
-    title: "에폭시 라이닝 바닥 고광택 마감",
-    tag: "✨ 에폭시 시공",
+    title: "양산 상가 바닥 데코타일 샌딩 및 원상복구",
+    tag: "✨ 바닥 원상복구",
     img: "/images/productsection/product-03.jpg",
-  },
-  {
-    title: "공장 · 물류창고 대형 파괴 철거",
-    tag: "🏗️ 대형 철거",
-    img: "/images/productsection/product-04.jpg",
-  },
-  {
-    title: "외벽 방수 & 콘크리트 균열 보강",
-    tag: "🏢 구조 보강",
-    img: "/images/productsection/product-05.jpg",
-  },
-  {
-    title: "식품 클린룸 에어샤워 설치 현장",
-    tag: "🧼 클린룸 시공",
-    img: "/images/productsection/product-06.jpg",
   },
 ];
 
@@ -108,8 +93,8 @@ export default function InstagramEmbedGrid({
     };
   }, [postUrls]);
 
-  // Ensure exactly 9 items
-  const items = Array.from({ length: 9 }).map((_, index) => {
+  // Ensure exactly 6 items for clean mobile/desktop grid
+  const items = Array.from({ length: 6 }).map((_, index) => {
     const url = postUrls[index] || "";
     const isRealInstagramEmbed =
       url.includes("instagram.com/p/") || url.includes("instagram.com/reel/");

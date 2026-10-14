@@ -2,42 +2,48 @@
 
 type Props = {
   callPhone?: string;
-  kakaoUrl?: string;
 };
 
 export default function BottomFloatingBar({
-  callPhone = "051-714-3396",
+  callPhone = "010-6638-6576",
 }: Props) {
+  const handleScrollToForm = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const el = document.getElementById("quick-lead-form");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      const input = el.querySelector("input[name='storeName']") as HTMLInputElement;
+      if (input) {
+        input.focus();
+      }
+    }
+  };
+
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-800 bg-slate-950/95 px-3 py-3 backdrop-blur-md shadow-2xl">
-      <div className="mx-auto flex max-w-lg items-center justify-between gap-2 md:max-w-xl">
-        {/* 📞 전화상담 */}
+    <aside
+      aria-label="빠른 상담 및 지원금 조회"
+      className="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-700/80 bg-slate-950/95 px-3 py-2.5 sm:py-3 backdrop-blur-md shadow-2xl"
+    >
+      <div className="mx-auto flex max-w-lg items-center gap-2.5">
+        {/* 좌측: [전화 상담] */}
         <a
-          href="/call"
-          className="flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-slate-900 px-2 py-3 text-xs font-black text-white shadow transition hover:bg-slate-800 active:scale-95 sm:text-sm"
+          href={`tel:${callPhone.replace(/[^0-9]/g, "")}`}
+          className="flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-slate-700 bg-slate-900 py-3 sm:py-3.5 px-3 text-xs sm:text-sm font-black text-white shadow-md transition hover:bg-slate-800 active:scale-95 cursor-pointer"
         >
-          <span className="text-base">📞</span>
-          <span>지금 당장 전화</span>
+          <span className="text-base sm:text-lg">📞</span>
+          <span>전화 상담</span>
         </a>
 
-        {/* 💬 문자상담 */}
+        {/* 우측: [지원금 무료 조회] */}
         <a
-          href="sms:0517143396?body=철거/보조금600만/HACCP/전기/보수 견적 문의드립니다."
-          className="flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-slate-700 bg-slate-800 px-2 py-3 text-xs font-black text-white shadow transition hover:bg-slate-700 active:scale-95 sm:text-sm"
+          href="#quick-lead-form"
+          onClick={handleScrollToForm}
+          className="flex flex-[1.3] items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 py-3 sm:py-3.5 px-3 text-xs sm:text-sm font-black text-slate-950 shadow-lg shadow-amber-500/25 transition hover:from-amber-300 hover:to-amber-500 active:scale-95 cursor-pointer"
         >
-          <span className="text-base">💬</span>
-          <span>문자 상담</span>
-        </a>
-
-        {/* 💰 보조금 600만 조회 */}
-        <a
-          href="#sms-lead"
-          className="flex flex-[1.2] items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 px-2 py-3 text-xs font-black text-slate-950 shadow-lg transition hover:from-amber-300 hover:to-amber-500 active:scale-95 sm:text-sm"
-        >
-          <span className="text-base">💰</span>
-          <span>보조금 600만 조회</span>
+          <span className="text-base sm:text-lg">💰</span>
+          <span>지원금 무료 조회</span>
         </a>
       </div>
-    </div>
+    </aside>
   );
 }
