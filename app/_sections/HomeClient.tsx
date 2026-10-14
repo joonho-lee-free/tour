@@ -1,6 +1,7 @@
 "use client";
 
 import TopAnnouncementBar from "../_components/TopAnnouncementBar";
+import HeroLeegaSection from "../_components/HeroLeegaSection";
 import HeroSimpleForm from "../_components/HeroSimpleForm";
 import LiveLeadsRolling from "../_components/LiveLeadsRolling";
 import SubsidyCalculatorInteractive from "../_components/SubsidyCalculatorInteractive";
@@ -27,7 +28,10 @@ export default function HomeClient({
       {/* 1. 상단 알림 바 (대표번호 051-714-3396) */}
       <TopAnnouncementBar />
 
-      {/* 2. 히어로 섹션 (첫 화면 - 모던 다크네이비 #0F172A + 상단 뱃지 + 신뢰 뱃지 3종 + 1분 지원금 무료 조회 폼) */}
+      {/* 2. 이가에프엔비 스타일 히어로 섹션 (화이트 2열 레이아웃: 헤드라인 + 3개 액션 버튼 + 우측 이미지 카드) */}
+      <HeroLeegaSection />
+
+      {/* 3. 문자 접수 폼 (기존과 동일하게 유지) */}
       <HeroSimpleForm sent={sent} error={error} />
 
       {/* 3. 실시간 접수 현황 (시간 표시 완전 삭제, 실제 부울경 지역 기반 텍스트 롤링) */}

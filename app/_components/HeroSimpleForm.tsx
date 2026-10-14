@@ -25,61 +25,22 @@ export default function HeroSimpleForm({ sent, error }: Props) {
     setPhone(formatted);
   };
 
-  // 폼으로 스크롤 이동 및 포커스
-  const handleScrollToForm = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const el = document.getElementById("quick-lead-form");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "center" });
-      const select = el.querySelector("select");
-      if (select) {
-        select.focus();
-      }
-    }
-  };
-
   return (
-    <header className="relative overflow-hidden bg-[#0B1120] text-center flex flex-col items-center justify-center pt-10 pb-12 px-4 sm:px-6">
+    <section className="relative overflow-hidden bg-[#0B1120] text-center flex flex-col items-center justify-center pt-8 pb-14 px-4 sm:px-6">
       {/* 은은한 배경 그라데이션 */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-blue-600/10 via-amber-500/5 to-transparent blur-3xl pointer-events-none" />
 
-      {/* 2. 상단 배지 (Badge) */}
-      <div className="inline-flex items-center px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/30 mb-4 backdrop-blur-sm shadow-xs">
-        <span>📍 부울경(부산·김해·창원·양산·마산) 전지역 출장 방문</span>
+      {/* 폼 안내 상단 헤더 */}
+      <div className="mb-6 max-w-xl text-center">
+        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold bg-amber-500/15 text-amber-400 border border-amber-500/30 mb-2">
+          ⚡ 1분 빠른 자격 조회
+        </span>
+        <h2 className="text-xl sm:text-2xl font-black text-white">
+          정부지원금 최대 600만 원 무료 조회 신청
+        </h2>
       </div>
 
-      {/* 3. 메인 타이틀 (Bold Typography) */}
-      <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight sm:leading-snug tracking-tight mb-3">
-        상가·매장 철거 비용, 내 돈 다 내지 마세요!
-        <br />
-        <span className="text-amber-400">정부지원금 최대 600만 원</span> + 서류 100% 무료 대행
-      </h1>
-
-      {/* 4. 서브 카피 */}
-      <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto mb-6">
-        현장 무료 실측 · 추가금 0원 보증 · 소진공 정산 서류 완벽 대행
-      </p>
-
-      {/* 5. Hero 빠른 액션 CTA 버튼 그룹 (leegafnb 스타일 2버튼) */}
-      <div className="flex flex-row items-center justify-center gap-3 w-full max-w-md mb-8">
-        <a
-          href="tel:0517143396"
-          className="flex-1 py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm sm:text-base border border-slate-700 flex items-center justify-center gap-2 transition"
-          aria-label="전화 상담 051-714-3396 바로 연결"
-        >
-          <span>📞 051-714-3396</span>
-        </a>
-        <a
-          href="#quick-lead-form"
-          onClick={handleScrollToForm}
-          className="flex-1 py-3 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm sm:text-base shadow-lg shadow-amber-500/20 flex items-center justify-center gap-1 transition"
-          aria-label="지원금 무료 조회 폼으로 이동"
-        >
-          <span>⚡ 지원금 무료 조회 ↓</span>
-        </a>
-      </div>
-
-      {/* [Hero 바로 밑 '문자 접수 폼'] */}
+      {/* 문자 접수 폼 카드 */}
       <div
         id="quick-lead-form"
         className="w-full max-w-xl rounded-2xl sm:rounded-3xl border border-slate-700/90 bg-slate-800/95 p-5 sm:p-7 shadow-2xl backdrop-blur-md text-left"
@@ -87,9 +48,9 @@ export default function HeroSimpleForm({ sent, error }: Props) {
         {/* 폼 카드 타이틀 */}
         <div className="flex items-center justify-between border-b border-slate-700 pb-3 mb-4">
           <div>
-            <h2 className="text-lg sm:text-xl font-black text-white">
+            <h3 className="text-lg sm:text-xl font-black text-white">
               내 지원금 대상 여부 무료 조회
-            </h2>
+            </h3>
             <p className="mt-1 text-xs text-slate-400">
               작성 즉시 담당자에게 문자로 안전하게 접수됩니다
             </p>
@@ -214,6 +175,6 @@ export default function HeroSimpleForm({ sent, error }: Props) {
           </p>
         </form>
       </div>
-    </header>
+    </section>
   );
 }
