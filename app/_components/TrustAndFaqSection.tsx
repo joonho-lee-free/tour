@@ -58,18 +58,18 @@ export default function TrustAndFaqSection() {
   };
 
   return (
-    <section className="w-full py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 text-slate-900 border-b border-slate-200">
+    <section className="w-full py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white text-gray-900 border-b border-gray-100">
       <div className="mx-auto max-w-4xl space-y-12 sm:space-y-16">
-        {/* 1) 왜 SH철거인가? 안심 3대 약속 카드 */}
+        {/* 1) 안심 3대 약속 카드 */}
         <div>
           <div className="text-center max-w-2xl mx-auto">
-            <span className="text-xs font-black text-amber-700 bg-amber-100/90 border border-amber-300 px-3 py-1 rounded-full uppercase tracking-wider">
-              SH 철거의 약속
+            <span className="text-xs font-black text-amber-700 bg-amber-100 border border-amber-300 px-3 py-1 rounded-full uppercase tracking-wider">
+              소상공인 안심 약속
             </span>
-            <h2 className="mt-3 text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
-              왜 SH철거인가? 안심 3대 약속
+            <h2 className="mt-3 text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">
+              안심 3대 약속
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-600">
+            <p className="mt-2 text-xs sm:text-sm text-gray-600">
               불투명한 추가 요금과 복잡한 서류 탈락 스트레스 없이 정직하게 원상복구합니다.
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function TrustAndFaqSection() {
             {PROMISES.map((item) => (
               <div
                 key={item.num}
-                className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-xs hover:border-amber-400 hover:shadow-md transition flex flex-col justify-between"
+                className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 shadow-xs hover:border-amber-400 hover:shadow-md transition flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between">
@@ -87,14 +87,14 @@ export default function TrustAndFaqSection() {
                       {item.badge}
                     </span>
                   </div>
-                  <h3 className="mt-4 text-base sm:text-lg font-black text-slate-900">
+                  <h3 className="mt-4 text-base sm:text-lg font-black text-gray-900">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                  <p className="mt-2 text-xs leading-relaxed text-gray-600">
                     {item.desc}
                   </p>
                 </div>
-                <div className="mt-4 border-t border-slate-100 pt-3 text-[11px] font-bold text-emerald-600">
+                <div className="mt-4 border-t border-gray-100 pt-3 text-[11px] font-bold text-emerald-600">
                   ✓ 본사 직영 시공 책임 보증
                 </div>
               </div>
@@ -103,15 +103,15 @@ export default function TrustAndFaqSection() {
         </div>
 
         {/* 2) 자주 묻는 질문 (FAQ 아코디언) */}
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs">
+        <div className="rounded-3xl border border-gray-200 bg-white p-6 sm:p-8 shadow-xs">
           <div className="text-center max-w-xl mx-auto mb-6 sm:mb-8">
             <span className="text-xs font-black text-blue-700 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider">
               FAQ
             </span>
-            <h3 className="mt-2 text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
+            <h3 className="mt-2 text-xl sm:text-2xl font-black text-gray-900 tracking-tight">
               자주 묻는 질문
             </h3>
-            <p className="mt-1 text-xs sm:text-sm text-slate-600">
+            <p className="mt-1 text-xs sm:text-sm text-gray-600">
               대표님들께서 가장 많이 궁금해하시는 질문을 모았습니다.
             </p>
           </div>
@@ -122,23 +122,23 @@ export default function TrustAndFaqSection() {
               return (
                 <div
                   key={faq.q}
-                  className="rounded-2xl border border-slate-200 overflow-hidden transition"
+                  className="rounded-2xl border border-gray-200 overflow-hidden transition"
                 >
                   <button
                     type="button"
                     onClick={() => toggleFaq(index)}
-                    className="w-full flex items-center justify-between p-4 sm:p-5 text-left bg-slate-50/60 hover:bg-slate-100/70 transition cursor-pointer"
+                    className="w-full flex items-center justify-between p-4 sm:p-5 text-left bg-gray-50/70 hover:bg-gray-100/70 transition cursor-pointer"
                   >
-                    <span className="text-xs sm:text-sm font-bold text-slate-900 flex items-center gap-2">
+                    <span className="text-xs sm:text-sm font-bold text-gray-900 flex items-center gap-2">
                       <span className="text-amber-600 font-black">Q.</span>
                       <span>{faq.q}</span>
                     </span>
-                    <span className={`text-slate-400 text-sm font-bold transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}>
+                    <span className={`text-gray-400 text-sm font-bold transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}>
                       ▼
                     </span>
                   </button>
                   {isOpen && (
-                    <div className="p-4 sm:p-5 bg-white text-xs sm:text-sm text-slate-700 leading-relaxed border-t border-slate-100 animate-fade-in">
+                    <div className="p-4 sm:p-5 bg-white text-xs sm:text-sm text-gray-700 leading-relaxed border-t border-gray-100 animate-fade-in">
                       <div className="flex gap-2">
                         <span className="text-emerald-600 font-black">A.</span>
                         <div>{faq.a}</div>
@@ -151,14 +151,14 @@ export default function TrustAndFaqSection() {
           </div>
 
           {/* 하단 간이 CTA */}
-          <div className="mt-8 pt-6 border-t border-slate-100 text-center sm:flex sm:items-center sm:justify-between gap-4">
-            <div className="text-left text-xs sm:text-sm text-slate-600">
+          <div className="mt-8 pt-6 border-t border-gray-100 text-center sm:flex sm:items-center sm:justify-between gap-4">
+            <div className="text-left text-xs sm:text-sm text-gray-600">
               더 궁금한 사항이 있으신가요? <strong>대표번호 051-714-3396</strong>으로 편하게 문의하세요.
             </div>
             <button
               type="button"
               onClick={handleScrollToForm}
-              className="mt-3 sm:mt-0 inline-flex items-center justify-center rounded-xl bg-slate-900 text-white px-4 py-2.5 text-xs font-bold hover:bg-slate-800 transition cursor-pointer whitespace-nowrap shadow-sm"
+              className="mt-3 sm:mt-0 inline-flex items-center justify-center rounded-xl bg-gray-900 text-white px-4 py-2.5 text-xs font-bold hover:bg-gray-800 transition cursor-pointer whitespace-nowrap shadow-sm"
             >
               내 점포 무료 실측 접수하기 ➔
             </button>

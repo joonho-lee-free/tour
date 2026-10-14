@@ -14,8 +14,8 @@ export default function InstagramSection() {
   ];
 
   return (
-    <section className="mx-auto w-full max-w-4xl px-4 py-12 sm:py-16 md:px-8 bg-white border-b border-slate-200">
-      <div className="rounded-3xl border border-slate-200 bg-slate-50/60 p-5 sm:p-7 shadow-xs">
+    <section className="mx-auto w-full max-w-4xl px-4 py-12 sm:py-16 md:px-8 bg-white border-b border-gray-100">
+      <div className="rounded-3xl border border-gray-200 bg-white p-5 sm:p-7 shadow-xs">
         {/* 헤더 섹션 */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
           <div>
@@ -23,10 +23,10 @@ export default function InstagramSection() {
               <span>📷</span>
               <span>Instagram Live</span>
             </div>
-            <h2 className="mt-2 text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+            <h2 className="mt-2 text-xl sm:text-2xl font-black text-gray-900 tracking-tight">
               공식 인스타그램 실시간 현장 소식
             </h2>
-            <p className="mt-1 text-xs sm:text-sm text-slate-600">
+            <p className="mt-1 text-xs sm:text-sm text-gray-600">
               부울경 현장에서 매일 투명하게 진행되는 철거 과정을 확인하세요.
             </p>
           </div>
@@ -46,7 +46,7 @@ export default function InstagramSection() {
         {/* 인스타 피드 그리드 (6개) */}
         <InstagramEmbedGrid postUrls={postUrls} instagramProfileUrl="https://www.instagram.com/shcom4553" />
 
-        <div className="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between text-xs text-slate-500">
+        <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
           <span>* 부울경 상가·매장 철거 실시간 포트폴리오</span>
           <a
             href="https://www.instagram.com/shcom4553"

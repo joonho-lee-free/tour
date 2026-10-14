@@ -131,13 +131,13 @@ export default function LiveLeadsRolling() {
   const activeItem = leads[currentIndex] || leads[0];
 
   return (
-    <section className="border-b border-slate-200 bg-slate-50 py-3 px-4 sm:px-6">
+    <section className="border-b border-gray-100 bg-white py-3 px-4 sm:px-6">
       <div className="mx-auto max-w-4xl">
         {/* 상단 텍스트 롤링 배너 (시간 표시 전면 삭제) */}
-        <div className="flex items-center gap-2.5 overflow-hidden rounded-xl bg-white px-3.5 py-2.5 shadow-xs border border-slate-200/80">
+        <div className="flex items-center gap-2.5 overflow-hidden rounded-xl bg-gray-50/80 px-3.5 py-2.5 shadow-xs border border-gray-200">
           <div className="flex items-center gap-1.5 flex-shrink-0">
             <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
-            <span className="text-[11px] sm:text-xs font-black text-emerald-800 bg-emerald-100/90 px-2 py-0.5 rounded-md">
+            <span className="text-[11px] sm:text-xs font-black text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">
               실시간 접수
             </span>
           </div>
@@ -146,12 +146,12 @@ export default function LiveLeadsRolling() {
           <div className="flex-1 overflow-hidden min-w-0">
             <div
               key={activeItem.id}
-              className="flex items-center gap-1.5 text-xs sm:text-sm text-slate-800 truncate animate-fade-in"
+              className="flex items-center gap-1.5 text-xs sm:text-sm text-gray-800 truncate animate-fade-in"
             >
-              <strong className="text-slate-950 font-bold truncate">
+              <strong className="text-gray-900 font-bold truncate">
                 {activeItem.location} {activeItem.store}
               </strong>
-              <span className="text-slate-400">·</span>
+              <span className="text-gray-400">·</span>
               <span className="text-amber-700 font-semibold truncate">
                 {activeItem.status}
               </span>
@@ -160,7 +160,7 @@ export default function LiveLeadsRolling() {
         </div>
 
         {/* 신뢰 강조 문구 */}
-        <p className="mt-1.5 text-center text-[11px] text-slate-600 font-medium">
+        <p className="mt-1.5 text-center text-[11px] text-gray-600 font-medium">
           🔥 지금도 부울경 사장님들이 실시간으로 지원금 혜택을 챙겨받고 계십니다.
         </p>
       </div>
