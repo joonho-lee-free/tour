@@ -23,10 +23,10 @@ export default function TopAnnouncementBar() {
 
         <div className="hidden sm:flex items-center gap-3">
           <a
-            href="tel:01066386576"
+            href="tel:0517143396"
             className="flex items-center gap-1 text-slate-200 hover:text-amber-400 font-bold transition text-xs"
           >
-            <span>📞 010-6638-6576</span>
+            <span>📞 051-714-3396</span>
           </a>
           <a
             href="#quick-lead-form"

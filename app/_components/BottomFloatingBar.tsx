@@ -5,7 +5,7 @@ type Props = {
 };
 
 export default function BottomFloatingBar({
-  callPhone = "010-6638-6576",
+  callPhone = "051-714-3396",
 }: Props) {
   const handleScrollToForm = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();

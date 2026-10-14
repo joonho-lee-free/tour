@@ -35,23 +35,40 @@ export default function HeroSimpleForm({ sent, error }: Props) {
         {/* 1. 최상단 강조 뱃지 */}
         <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-3.5 py-1.5 text-xs sm:text-sm font-bold text-amber-300 backdrop-blur-sm">
           <span className="flex h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
-          <span>부울경(부산·김해·창원·양산·마산) 전지역 출장 방문</span>
+          <span>부울경(부산·김해·창원·양산·마산) 상가·매장 원상복구 전문</span>
         </div>
 
-        {/* 2. 메인 카피라이팅 (초간결 & 강렬) */}
+        {/* 2. 메인 헤드라인 (초간결 & 강렬) */}
         <h1 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight sm:leading-tight">
           상가·매장 철거 비용,
           <br className="sm:hidden" />
           <span className="text-white"> 내 돈 다 내지 마세요!</span>
         </h1>
 
+        {/* 3. 서브 헤드라인 */}
         <p className="mt-3 text-sm sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          <strong className="text-amber-400 font-extrabold">정부지원금 최대 600만 원 지원</strong>
+          <strong className="text-amber-400 font-extrabold">정부보조금 최대 600만 원 지원</strong>
           <span className="text-slate-400"> + </span>
           복잡한 증빙 서류 100% 무료 대행
         </p>
 
-        {/* 3. 초간단 1분 신청 폼 (첫 화면 핵심 노출) */}
+        {/* 4. 신뢰 뱃지 3종 */}
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-bold text-slate-200">
+          <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800/80 px-3 py-1.5 shadow-xs">
+            <span className="text-emerald-400 font-black">✓</span>
+            <span>추가금 0원 확정 견적</span>
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800/80 px-3 py-1.5 shadow-xs">
+            <span className="text-amber-400 font-black">✓</span>
+            <span>공단 서류 100% 무료 접수</span>
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800/80 px-3 py-1.5 shadow-xs">
+            <span className="text-blue-400 font-black">✓</span>
+            <span>세금계산서·폐기물 확인서 완벽 발행</span>
+          </span>
+        </div>
+
+        {/* 5. 초간단 1분 신청 폼 (첫 화면 핵심 노출) */}
         <div
           id="quick-lead-form"
           className="mt-6 sm:mt-8 mx-auto max-w-xl rounded-2xl sm:rounded-3xl border border-slate-700/80 bg-slate-800/90 p-5 sm:p-7 shadow-2xl backdrop-blur-md text-left"
@@ -78,7 +95,7 @@ export default function HeroSimpleForm({ sent, error }: Props) {
           )}
           {error && (
             <div className="mb-4 rounded-xl border border-red-500/50 bg-red-500/20 p-3.5 text-xs sm:text-sm font-bold text-red-300">
-              ⚠️ 접수 중 문제가 발생했습니다. 직통 번호(010-6638-6576)로 전화주시면 바로 안내해 드립니다.
+              ⚠️ 접수 중 문제가 발생했습니다. 대표번호(051-714-3396)로 전화주시면 바로 안내해 드립니다.
             </div>
           )}
 
@@ -109,7 +126,7 @@ export default function HeroSimpleForm({ sent, error }: Props) {
                   className="w-full appearance-none rounded-xl border border-slate-600 bg-slate-900 px-3.5 py-3 text-sm font-semibold text-white outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/30 transition cursor-pointer"
                 >
                   <option value="부산 전지역">부산광역시 전지역 (해운대/서면/동래/사상 등)</option>
-                  <option value="김해시">경남 김해시 (내외동/장유/진영 등)</option>
+                  <option value="김해시">경남 김해시 (내외동/장유/삼계 등)</option>
                   <option value="창원·마산">경남 창원시 · 마산 · 진해</option>
                   <option value="양산시">경남 양산시 (물금/웅상/덕계 등)</option>
                   <option value="울산광역시">울산광역시 전지역</option>

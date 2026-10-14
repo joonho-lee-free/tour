@@ -27,7 +27,7 @@ export default function Footer() {
                 <span className="font-semibold text-slate-300">사업장 주소</span> : 부산시 강서구 낙동북로 31번길 19
               </div>
               <div>
-                <span className="font-semibold text-slate-300">직통 전화</span> : 010-6638-6576 / 051-714-3396
+                <span className="font-semibold text-slate-300">대표 전화</span> : 051-714-3396
               </div>
             </div>
 
@@ -51,10 +51,10 @@ export default function Footer() {
               </p>
               <div className="mt-3 flex gap-2">
                 <a
-                  href="tel:01066386576"
+                  href="tel:0517143396"
                   className="inline-flex items-center gap-1 text-xs font-bold text-amber-400 hover:text-amber-300"
                 >
-                  <span>📞 010-6638-6576 직통 연결</span>
+                  <span>📞 051-714-3396 대표번호 직통 연결</span>
                 </a>
               </div>
             </div>
