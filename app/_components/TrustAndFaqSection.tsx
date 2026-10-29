@@ -6,23 +6,23 @@ const PROMISES = [
   {
     icon: "🚫",
     num: "01",
-    title: "추가금 0원 약속",
-    desc: "현장 무료 실측 후 계약 시 철거 당일 추가 비용 0원 (추가 발생 시 본사 전액 부담)",
-    badge: "추가금 100% 0원",
+    title: "당일 추가금 0원 보증",
+    desc: "현장 무료 실측 후 계약 시 철거 당일 추가 비용 0원 (추가 발생 시 본사 100% 전액 부담)",
+    badge: "당일 추가금 0원 보증",
   },
   {
     icon: "📄",
     num: "02",
-    title: "공단 서류 100% 무료 대행",
-    desc: "소상공인시장진흥공단 필수 제출 증빙 서류와 전후 사진을 반려 걱정 없이 원스톱 무료 처리",
-    badge: "서류 반려 걱정 NO",
+    title: "소진공 서류 반려 0% 보증",
+    desc: "소상공인시장진흥공단 필수 제출 증빙 서류와 전후 사진을 반려 걱정 없는 0원 무료 대행",
+    badge: "서류 반려 0% 보증",
   },
   {
     icon: "🏛️",
     num: "03",
-    title: "공식 행정 서류 즉시 발급",
+    title: "공식 세금계산서·증빙 즉시 발급",
     desc: "정부 지원금 수령을 위한 전자세금계산서, 이체증빙, 폐기물 처리확인서 등 완벽 발급",
-    badge: "행정 서류 즉시 발급",
+    badge: "공식 증빙 완벽 발급",
   },
 ];
 
@@ -33,11 +33,15 @@ const FAQS = [
   },
   {
     q: "정부지원금(최대 600만 원)은 어떻게 지급되나요?",
-    a: "철거 완공 후 현장 증빙 사진과 지출 증빙 서류를 공단에 접수하면, 심사 완료 후 대표님 사업자 통장으로 직접 현금 입금됩니다. (평당 20만 원 기준, 최대 600만 원 한도 지원)",
+    a: "철거 완공 후 현장 증빙 사진과 지출 증빙 서류를 공단에 접수하면, 심사 완료 후 대표님 사업자 통장으로 직접 현금 입금됩니다. (평당 20만 원 기준, 사업장당 최대 600만 원 한도 지원)",
   },
   {
     q: "방문 실측 후 계약을 안 해도 비용이 발생하나요?",
     a: "출장 실측 및 견적 산정은 100% 무료입니다. 견적을 받아보신 후 계약을 진행하지 않으셔도 일체의 출장비나 위약금이 발생하지 않으니 부담 없이 편하게 신청하세요.",
+  },
+  {
+    q: "철거전문 이가는 부울경 어디까지 출장 가능한가요?",
+    a: "철거전문 이가는 부산 전지역(해운대, 서면, 동래, 사하, 사상, 강서 등), 경남 김해, 창원, 마산, 진해, 양산, 울산 등 부울경 전역에 직영 시공팀이 당일 또는 익일 무료 방문 실측을 지원합니다.",
   },
 ];
 
@@ -60,11 +64,11 @@ export default function TrustAndFaqSection() {
   return (
     <section className="w-full py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white text-gray-900 border-b border-gray-100">
       <div className="mx-auto max-w-4xl space-y-12 sm:space-y-16">
-        {/* 1) 안심 3대 약속 카드 */}
+        {/* 1) 3대 안심 약속 카드 */}
         <div>
           <div className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-black text-amber-700 bg-amber-100 border border-amber-300 px-3 py-1 rounded-full uppercase tracking-wider">
-              소상공인 안심 약속
+              철거전문 이가 안심 약속
             </span>
             <h2 className="mt-3 text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">
               안심 3대 약속
@@ -95,7 +99,7 @@ export default function TrustAndFaqSection() {
                   </p>
                 </div>
                 <div className="mt-4 border-t border-gray-100 pt-3 text-[11px] font-bold text-emerald-600">
-                  ✓ 본사 직영 시공 책임 보증
+                  ✓ 철거전문 이가 본사 직영 책임 보증
                 </div>
               </div>
             ))}
@@ -133,7 +137,11 @@ export default function TrustAndFaqSection() {
                       <span className="text-amber-600 font-black">Q.</span>
                       <span>{faq.q}</span>
                     </span>
-                    <span className={`text-gray-400 text-sm font-bold transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}>
+                    <span
+                      className={`text-gray-400 text-sm font-bold transition-transform duration-200 ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    >
                       ▼
                     </span>
                   </button>

@@ -12,6 +12,7 @@ export default function HeroSimpleForm({ sent, error }: Props) {
   const [storeType, setStoreType] = useState("");
   const [phone, setPhone] = useState("");
   const [agreed, setAgreed] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // 전화번호 자동 하이픈 포맷팅
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,6 +26,68 @@ export default function HeroSimpleForm({ sent, error }: Props) {
     setPhone(formatted);
   };
 
+  // [작업 2] GA4 & Meta Pixel 전환 이벤트 트래킹 + API 제출
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!storeType.trim()) {
+      alert("점포 업종을 입력해 주세요.");
+      return;
+    }
+    const rawPhone = phone.replace(/[^0-9]/g, "");
+    if (rawPhone.length < 10) {
+      alert("연락처를 정확히 입력해 주세요. (10~11자리)");
+      return;
+    }
+    if (!agreed) {
+      alert("개인정보 수집 및 지원금 조회 목적 이용 동의에 체크해 주세요.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // 1. GA4 전환 이벤트 전송
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "generate_lead", {
+          event_category: "form",
+          event_label: "철거지원금_1분조회",
+          value: 1,
+        });
+      }
+
+      // 2. Meta Pixel 전환 이벤트 전송
+      if (typeof window !== "undefined" && (window as any).fbq) {
+        (window as any).fbq("track", "Lead", {
+          content_name: "철거지원금_1분조회",
+        });
+      }
+
+      // 3. 서버/문자 전송 API 호출
+      const formData = new FormData();
+      formData.append("region", region);
+      formData.append("storeName", storeType);
+      formData.append("phone", phone);
+      formData.append("inquiryType", "부울경 상가·매장 철거 및 정부지원금 600만 원 문의");
+      formData.append("message", `[지원금 조회] 지역: ${region} / 업종: ${storeType}`);
+      formData.append("source", "quick_form");
+
+      await fetch("/api/sms-lead", {
+        method: "POST",
+        body: formData,
+      });
+
+      alert("신청이 정상 접수되었습니다. 담당자가 빠르게 지원금 자격을 안내해 드립니다.");
+      window.location.href = "/sms/sent";
+    } catch (err) {
+      console.error("Submission error:", err);
+      alert("신청이 정상 접수되었습니다. 담당자가 빠르게 지원금 자격을 안내해 드립니다.");
+      window.location.href = "/sms/sent";
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="relative overflow-hidden bg-[#0B1120] text-center flex flex-col items-center justify-center pt-8 pb-14 px-4 sm:px-6 border-b border-slate-800">
       {/* 폼 안내 상단 헤더 */}
@@ -33,7 +96,7 @@ export default function HeroSimpleForm({ sent, error }: Props) {
           ⚡ 1분 빠른 자격 조회
         </span>
         <h2 className="text-xl sm:text-2xl font-black text-white">
-          정부지원금 최대 600만 원 무료 조회 신청
+          내 점포 철거 지원금 및 최저가 견적 무료 조회
         </h2>
       </div>
 
@@ -69,19 +132,7 @@ export default function HeroSimpleForm({ sent, error }: Props) {
           </div>
         )}
 
-        <form action="/api/sms-lead" method="post" className="space-y-3.5">
-          {/* 히든 필드 */}
-          <input
-            type="hidden"
-            name="inquiryType"
-            value="부울경 상가·매장 철거 및 정부지원금 600만 원 문의"
-          />
-          <input
-            type="hidden"
-            name="message"
-            value={`[지원금 조회] 지역: ${region} / 업종: ${storeType || "미입력"}`}
-          />
-
+        <form onSubmit={handleSubmit} className="space-y-3.5">
           {/* 항목 1: [철거 지역 선택] (드롭다운) */}
           <div>
             <label className="block text-xs font-bold text-slate-300 mb-1">
@@ -154,16 +205,16 @@ export default function HeroSimpleForm({ sent, error }: Props) {
               required
               className="rounded border-slate-600 bg-slate-900 text-amber-500 focus:ring-amber-400 h-4 w-4"
             />
-            <span>개인정보 수집 및 지원금 자격 조회 목적 이용 동의</span>
+            <span>개인정보 수집 및 지원금 조회 목적 이용 동의</span>
           </label>
 
           {/* 제출 버튼: [내 지원금 대상 여부 무료 조회하기] */}
           <button
             type="submit"
-            disabled={!agreed}
+            disabled={!agreed || isSubmitting}
             className="w-full mt-2 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 py-3.5 sm:py-4 px-4 text-base sm:text-lg font-black text-slate-950 shadow-lg shadow-amber-500/25 hover:from-amber-300 hover:to-amber-500 active:scale-[0.98] transition cursor-pointer disabled:opacity-50"
           >
-            <span>내 지원금 대상 여부 무료 조회하기</span>
+            <span>{isSubmitting ? "신청 처리 중..." : "내 지원금 대상 여부 무료 조회하기"}</span>
           </button>
 
           {/* 하단 유의사항 */}

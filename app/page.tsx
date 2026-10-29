@@ -53,15 +53,9 @@ type SearchParams = {
   error?: string;
 };
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams?: Promise<SearchParams> | SearchParams;
+export default async function Page(props: {
+  searchParams?: Promise<SearchParams>;
 }) {
-  const sp: SearchParams =
-    searchParams && typeof (searchParams as any)?.then === "function"
-      ? await (searchParams as Promise<SearchParams>)
-      : ((searchParams as SearchParams) ?? {});
-
+  const sp = (await props.searchParams) || {};
   return <HomeClient searchParams={sp} />;
 }

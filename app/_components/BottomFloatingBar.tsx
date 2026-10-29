@@ -40,7 +40,7 @@ export default function BottomFloatingBar({
           onClick={handleScrollToForm}
           className="flex flex-[1.3] items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 py-3 sm:py-3.5 px-3 text-xs sm:text-sm font-black text-slate-950 shadow-lg shadow-amber-500/25 transition hover:from-amber-300 hover:to-amber-500 active:scale-95 cursor-pointer"
         >
-          <span className="text-base sm:text-lg">💰</span>
+          <span className="text-base sm:text-lg">⚡</span>
           <span>지원금 무료 조회</span>
         </a>
       </div>

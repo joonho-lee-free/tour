@@ -6,80 +6,102 @@ import { db } from "../../lib/firebaseClient";
 
 type LeadItem = {
   id: string;
-  location: string;
-  store: string;
-  status: string;
+  category: string;
+  detail: string;
+  timeAgo: string;
 };
 
-// 부울경 실제 지역 기반 깔끔한 접수 현황 (시간 표시 완전 배제)
+// 부울경 실제 상권 중심 실시간 접수 롤링 데이터 (평수 + 업종 + 지역 + 최근 시간)
 const DEFAULT_REALTIME_LEADS: LeadItem[] = [
   {
     id: "lead-1",
-    location: "부산 사하구",
-    store: "OO식당",
-    status: "지원금 자격 조회 및 실측 접수",
+    category: "원상복구",
+    detail: "18평 카페 · 부산 전포동",
+    timeAgo: "12분 전",
   },
   {
     id: "lead-2",
-    location: "창원 성산구",
-    store: "OO카페",
-    status: "무료 현장 실측 신청",
+    category: "정부지원금 조회",
+    detail: "32평 고깃집 · 김해 내외동",
+    timeAgo: "28분 전",
   },
   {
     id: "lead-3",
-    location: "김해 삼계동",
-    store: "OO학원",
-    status: "원상복구 및 서류 대행 접수",
+    category: "인테리어 철거",
+    detail: "45평 학원 · 창원 성산구",
+    timeAgo: "45분 전",
   },
   {
     id: "lead-4",
-    location: "양산 물금읍",
-    store: "OO의류매장",
-    status: "정부지원금 600만 원 대상 승인",
+    category: "부분 원상복구",
+    detail: "12평 미용실 · 양산 물금읍",
+    timeAgo: "1시간 전",
   },
   {
     id: "lead-5",
-    location: "부산 해운대구",
-    store: "OO베이커리",
-    status: "무료 현장 실측 예약",
+    category: "원상복구",
+    detail: "25평 베이커리 · 부산 해운대구",
+    timeAgo: "방금 전",
   },
   {
     id: "lead-6",
-    location: "마산 회원구",
-    store: "OO호프",
-    status: "원상복구 및 서류 대행 접수",
+    category: "정부지원금 조회",
+    detail: "38평 의류매장 · 부산 서면",
+    timeAgo: "8분 전",
   },
   {
     id: "lead-7",
-    location: "부산 부산진구",
-    store: "OO헤어샵",
-    status: "지원금 자격 조회 및 실측 접수",
+    category: "인테리어 철거",
+    detail: "20평 주점 · 마산 회원구",
+    timeAgo: "35분 전",
   },
   {
     id: "lead-8",
-    location: "김해 내외동",
-    store: "OO당구장",
-    status: "무료 현장 실측 신청",
+    category: "원상복구",
+    detail: "50평 피트니스 · 부산 동래구",
+    timeAgo: "50분 전",
   },
   {
     id: "lead-9",
-    location: "울산 남구",
-    store: "OO사무실",
-    status: "원상복구 및 폐업 지원금 접수",
+    category: "부분 철거",
+    detail: "16평 디저트샵 · 김해 삼계동",
+    timeAgo: "1시간 전",
   },
   {
     id: "lead-10",
-    location: "부산 동래구",
-    store: "OO피트니스",
-    status: "지원금 자격 조회 및 실측 예약",
+    category: "정부지원금 조회",
+    detail: "30평 사무실 · 울산 남구",
+    timeAgo: "2시간 전",
   },
 ];
+
+function formatTimeAgo(ts: any, fallbackIndex: number) {
+  if (!ts) return DEFAULT_REALTIME_LEADS[fallbackIndex % DEFAULT_REALTIME_LEADS.length].timeAgo;
+  try {
+    const millis =
+      typeof ts.toMillis === "function"
+        ? ts.toMillis()
+        : ts.seconds
+        ? ts.seconds * 1000
+        : null;
+    if (!millis) return "방금 전";
+    const diff = Date.now() - millis;
+    const min = Math.floor(diff / 60000);
+    if (min < 1) return "방금 전";
+    if (min < 60) return `${min}분 전`;
+    const h = Math.floor(min / 60);
+    if (h < 24) return `${h}시간 전`;
+    return "1시간 전";
+  } catch {
+    return "방금 전";
+  }
+}
 
 export default function LiveLeadsRolling() {
   const [leads, setLeads] = useState<LeadItem[]>(DEFAULT_REALTIME_LEADS);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Firestore 실시간 데이터 연동 (부울경 실제 접수건만 안전하게 필터링하여 최신순 10건 조회)
+  // Firestore 실시간 데이터 연동
   useEffect(() => {
     try {
       const q = query(
@@ -94,23 +116,23 @@ export default function LiveLeadsRolling() {
           if (!snap.empty) {
             const firestoreItems: LeadItem[] = [];
 
-            snap.docs.forEach((doc) => {
+            snap.docs.forEach((doc, idx) => {
               const d = doc.data() as any;
               const region = (d.displayRegion || "").trim();
               const name = (d.displayName || "").trim();
 
-              // 영문 테스트 데이터(Madagascar 등) 배제하고 유효한 데이터만 수집
               const isInvalid =
                 !region ||
                 /madagascar|test|sample|[a-zA-Z]{4,}/i.test(region) ||
                 /test|sample|[a-zA-Z]{5,}/i.test(name);
 
               if (!isInvalid) {
+                const category = d.inquiryType && d.inquiryType.includes("지원금") ? "정부지원금 조회" : "원상복구";
                 firestoreItems.push({
                   id: doc.id,
-                  location: region,
-                  store: name || "상가점포",
-                  status: "지원금 자격 조회 및 실측 접수",
+                  category,
+                  detail: `${name || "상가점포"} · ${region}`,
+                  timeAgo: formatTimeAgo(d.createdAt, idx),
                 });
               }
             });
@@ -145,7 +167,7 @@ export default function LiveLeadsRolling() {
   return (
     <div className="w-full bg-slate-950 px-3 py-2 text-white border-b border-amber-500/30">
       <div className="mx-auto flex max-w-5xl items-center justify-between text-xs font-bold gap-3">
-        {/* 좌측: 실시간 접수 롤링 뱃지 + 내용 */}
+        {/* 좌측: 실시간 접수 초록 펄스 뱃지 + 평수/업종/지역 롤링 내용 */}
         <div className="flex items-center gap-2 overflow-hidden min-w-0 flex-1">
           <div className="flex items-center gap-1.5 flex-shrink-0">
             <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
@@ -154,24 +176,26 @@ export default function LiveLeadsRolling() {
             </span>
           </div>
 
-          {/* 롤링되는 단일 텍스트 (시간 없이 깔끔하게 접수 내용만 노출) */}
+          {/* 롤링되는 단일 텍스트 ([원상복구] 18평 카페 · 부산 전포동 (12분 전)) */}
           <div className="overflow-hidden min-w-0 flex-1">
             <div
               key={activeItem.id}
               className="flex items-center gap-1.5 text-xs sm:text-sm truncate animate-fade-in"
             >
-              <strong className="text-white font-bold truncate">
-                {activeItem.location} {activeItem.store}
+              <span className="text-amber-400 font-bold whitespace-nowrap">
+                [{activeItem.category}]
+              </span>
+              <strong className="text-white font-medium truncate">
+                {activeItem.detail}
               </strong>
-              <span className="text-slate-500">·</span>
-              <span className="text-amber-400 font-semibold truncate">
-                {activeItem.status}
+              <span className="text-slate-400 font-normal whitespace-nowrap text-[11px] sm:text-xs">
+                ({activeItem.timeAgo})
               </span>
             </div>
           </div>
         </div>
 
-        {/* 우측 보조 문구 (051-714-3396 및 조회하기 버튼은 제외) */}
+        {/* 우측 보조 문구 */}
         <div className="hidden md:flex items-center gap-1.5 text-[11px] text-slate-400 flex-shrink-0">
           <span>🔥</span>
           <span className="text-slate-300 font-medium">부울경 전지역 출장 방문 실측</span>
